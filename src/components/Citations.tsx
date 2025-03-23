@@ -52,14 +52,14 @@ const citations: Citation[] = [
     id: 'eriksen2014',
     authors: 'Eriksen, M., Lebreton, L. C. M., Carson, H. S., Thiel, M., Moore, C. J., Borerro, J. C., Galgani, F., Ryan, P. G., & Reisser, J.',
     year: '2014',
-    title: 'Plastic pollution in the world's oceans: More than 5 trillion plastic pieces weighing over 250,000 tons afloat at sea',
+    title: "Plastic pollution in the world's oceans: More than 5 trillion plastic pieces weighing over 250,000 tons afloat at sea",
     source: 'PLoS ONE, 9(12), e111913',
     type: 'academic',
     url: 'https://doi.org/10.1371/journal.pone.0111913'
   },
   {
     id: 'ragusa2021',
-    authors: 'Ragusa, A., Svelato, A., Santacroce, C., Catalano, P., Notarstefano, V., Carnevali, O., Papa, F., Rongioletti, M. C. A., Baiocco, F., Draghi, S., D'Amore, E., Rinaldo, D., Matta, M., & Giorgini, E.',
+    authors: 'Ragusa, A., Svelato, A., Santacroce, C., Catalano, P., Notarstefano, V., Carnevali, O., Papa, F., Rongioletti, M. C. A., Baiocco, F., Draghi, S., D\'Amore, E., Rinaldo, D., Matta, M., & Giorgini, E.',
     year: '2021',
     title: 'Plasticenta: First evidence of microplastics in human placenta',
     source: 'Environment International, 146, 106274',

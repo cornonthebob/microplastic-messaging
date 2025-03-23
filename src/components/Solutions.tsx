@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 
@@ -43,7 +42,7 @@ const solutions: Solution[] = [
       'Currently energy-intensive and expensive',
       'Still in scaling phase with limited capacity',
       'May produce hazardous byproducts if not properly managed',
-      'Doesn't address microplastics already in the environment'
+      "Doesn't address microplastics already in the environment"
     ]
   },
   {
