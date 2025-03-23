@@ -1,5 +1,5 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import PlasticInfo from "@/components/PlasticInfo";
@@ -7,6 +7,8 @@ import InteractiveGraphic from "@/components/InteractiveGraphic";
 import Solutions from "@/components/Solutions";
 import Citations from "@/components/Citations";
 import Footer from "@/components/Footer";
+import DetailedVisualization from "@/components/DetailedVisualization";
+import OceanHealth from "@/components/OceanHealth";
 
 const Index = () => {
   useEffect(() => {
@@ -32,7 +34,8 @@ const Index = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-fade-in');
-            entry.target.style.opacity = '1';
+            // Use element.classList instead of element.style for TypeScript compatibility
+            entry.target.classList.remove('opacity-0');
           }
         });
       },
@@ -53,11 +56,13 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden microplastic-cursor">
       <Navbar />
       <Hero />
       <PlasticInfo />
+      <DetailedVisualization />
       <InteractiveGraphic />
+      <OceanHealth />
       <Solutions />
       <Citations />
       <Footer />
