@@ -1,245 +1,114 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-interface Solution {
-  id: string;
-  group: string;
-  approach: string;
-  description: string;
-  advantages: string[];
-  limitations: string[];
-}
-
-const solutions: Solution[] = [
-  {
-    id: 'reduction',
-    group: 'Government',
-    approach: 'Plastic Bans & Regulations',
-    description: 'Many countries and localities have enacted bans on specific plastic items like bags, straws, and microbeads. The EU Single-Use Plastics Directive aims to reduce consumption of specific single-use items and implement Extended Producer Responsibility.',
-    advantages: [
-      'Direct and immediate reduction in plastic waste generation',
-      'Creates regulatory framework to incentivize alternatives',
-      'Drives market innovation for sustainable materials'
-    ],
-    limitations: [
-      'Implementation and enforcement challenges',
-      'Economic impacts on industries dependent on plastic',
-      'May shift to alternatives with different environmental impacts',
-      'Varies greatly between regions, creating inconsistent global policy'
-    ]
-  },
-  {
-    id: 'recycling',
-    group: 'Industry',
-    approach: 'Advanced Recycling Technologies',
-    description: 'Development of chemical recycling methods that break down plastics into their chemical components for reuse. Companies like PureCycle Technologies and Loop Industries are developing processes to depolymerize and repolymerize plastics.',
-    advantages: [
-      'Can process mixed and contaminated plastics unlike mechanical recycling',
-      'Creates virgin-quality recycled materials',
-      'Potential for closed-loop plastic systems'
-    ],
-    limitations: [
-      'Currently energy-intensive and expensive',
-      'Still in scaling phase with limited capacity',
-      'May produce hazardous byproducts if not properly managed',
-      "Doesn't address microplastics already in the environment"
-    ]
-  },
-  {
-    id: 'biodegradable',
-    group: 'Research',
-    approach: 'Biodegradable Alternatives',
-    description: 'Development of truly biodegradable plastics from renewable resources. Research includes PHA (polyhydroxyalkanoates) produced by bacteria and cellulose-based materials that safely degrade in natural environments.',
-    advantages: [
-      'Potential for complete biodegradation in natural environments',
-      'Can be produced from renewable feedstocks',
-      'Reduced persistence in environment if properly designed'
-    ],
-    limitations: [
-      'Currently more expensive than conventional plastics',
-      'Many require specific industrial composting conditions',
-      'May not perform as well for all applications',
-      'Confusion about terms "biodegradable" vs "compostable"'
-    ]
-  },
-  {
-    id: 'cleanup',
-    group: 'NGOs',
-    approach: 'Cleanup Technologies',
-    description: 'Organizations like The Ocean Cleanup are developing technologies to remove plastic from oceans and rivers. New innovations include microplastic filters for wastewater treatment plants and household appliances.',
-    advantages: [
-      'Addresses existing pollution already in environment',
-      'Can prevent further fragmentation into microplastics',
-      'Raises awareness about plastic pollution'
-    ],
-    limitations: [
-      'Catching microplastics is extremely difficult once dispersed',
-      'High energy and resource costs for relatively low capture rates',
-      'Treats symptoms rather than root causes',
-      'Scale of pollution vastly exceeds current cleanup capabilities'
-    ]
-  },
-  {
-    id: 'enzymes',
-    group: 'Research',
-    approach: 'Plastic-Degrading Enzymes',
-    description: 'Scientists have discovered and engineered enzymes capable of breaking down PET and other plastics. In 2020, researchers at the University of Portsmouth and NREL created an improved version called PETase that accelerates plastic degradation.',
-    advantages: [
-      'Specific to plastic polymer types without harming other materials',
-      'Operates at ambient conditions with low energy requirements',
-      'Potential for complete depolymerization to monomers for recycling'
-    ],
-    limitations: [
-      'Currently works mainly on PET, not all plastic types',
-      'Slow degradation rates for practical applications',
-      'Challenges in enzyme delivery and recovery',
-      'Environmental impacts of released enzymes not fully understood'
-    ]
-  },
-  {
-    id: 'circular',
-    group: 'Combined',
-    approach: 'Circular Economy Models',
-    description: 'Holistic approach focusing on redesigning products and systems to eliminate waste and pollution. Organizations like the Ellen MacArthur Foundation promote circular economy principles: eliminate, innovate, and circulate.',
-    advantages: [
-      'Addresses entire lifecycle from design to end-of-life',
-      'Creates economic incentives for sustainable practices',
-      'Reduces resource extraction and waste simultaneously',
-      'Encourages system-level innovation'
-    ],
-    limitations: [
-      'Requires coordination across multiple stakeholders',
-      'Significant transition costs and infrastructure changes',
-      'Cultural and behavioral shifts needed',
-      'Complex implementation requiring policy, technology, and business model changes'
-    ]
-  }
-];
-
 const Solutions = () => {
   return (
-    <section id="solutions" className="bg-white">
+    <section className="bg-white">
       <div className="section-container">
         <div className="text-center mb-16 opacity-0 animate-fade-in">
-          <span className="inline-flex items-center rounded-full px-4 py-1 text-xs font-medium bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">
-            Addressing The Crisis
+          <span className="inline-flex items-center rounded-full px-4 py-1 text-xs font-medium bg-green-50 text-green-700 ring-1 ring-inset ring-green-700/10 mb-4">
+            Taking Action
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold">Approaches to Solving Plastic Pollution</h2>
-          <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 mb-8 rounded-full"></div>
+          <h2 className="text-3xl md:text-4xl font-bold">Solutions to Plastic Pollution</h2>
+          <div className="w-20 h-1 bg-green-500 mx-auto mt-4 mb-8 rounded-full"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Various stakeholders are developing solutions to address the microplastic crisis from different angles. Here we evaluate approaches being taken around the world.
+            Addressing plastic pollution requires a multifaceted approach involving individuals, industries, and governments.
+            Here are some key strategies to mitigate the impact of microplastics.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 opacity-0 animate-slide-up">
-          {solutions.map((solution, index) => (
-            <div 
-              key={solution.id}
-              className={cn(
-                "glass-card p-6 opacity-0 animate-slide-up",
-                `animation-delay-${(index + 2) * 100}`
-              )}
-            >
-              <div className="mb-4 flex items-start justify-between">
-                <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium bg-gray-100 text-gray-800">
-                  {solution.group}
-                </span>
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">{solution.approach}</h3>
-              <p className="text-gray-600 text-sm mb-4">{solution.description}</p>
-              
-              <div className="space-y-3">
-                <div>
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Advantages</h4>
-                  <ul className="text-xs text-gray-600 space-y-1">
-                    {solution.advantages.map((advantage, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-green-500 flex-shrink-0">✓</span>
-                        <span>{advantage}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Limitations</h4>
-                  <ul className="text-xs text-gray-600 space-y-1">
-                    {solution.limitations.map((limitation, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-red-500 flex-shrink-0">•</span>
-                        <span>{limitation}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="bg-blue-50 rounded-2xl p-6 md:p-8 border border-blue-100 opacity-0 animate-slide-up animation-delay-800">
-          <h3 className="text-2xl font-bold mb-6 text-center">Recommended Approach: The Circular Economy</h3>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-lg font-semibold mb-3 text-blue-800">Why It's Most Effective</h4>
-              <p className="text-gray-700 mb-4">
-                After analyzing the various approaches, the circular economy model represents the most comprehensive and sustainable solution to the microplastics crisis. Unlike other approaches that tackle only one aspect of the problem, a circular economy addresses the entire lifecycle of plastics.
-              </p>
-              <p className="text-gray-700">
-                By redesigning how products are made and used, we can prevent plastic waste from being created in the first place, while still maintaining the useful functions that plastics serve in our society. This systems-level approach combines the strengths of other solutions while addressing their limitations.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-3 text-blue-800">Implementation Challenges</h4>
-              <p className="text-gray-700 mb-4">
-                Despite its promise, implementing a circular economy for plastics faces significant challenges:
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-600 flex-shrink-0">•</span>
-                  <span><strong>Economic barriers</strong>: Current economic incentives favor virgin plastic production over recycled materials.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-600 flex-shrink-0">•</span>
-                  <span><strong>Technical limitations</strong>: Many plastic products are designed without consideration for end-of-life recycling or reuse.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-600 flex-shrink-0">•</span>
-                  <span><strong>Infrastructure gaps</strong>: Waste management systems in many regions lack the capability to implement circular principles.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-600 flex-shrink-0">•</span>
-                  <span><strong>Global coordination</strong>: Requires international cooperation across supply chains and between nations.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="mt-6 bg-white p-5 rounded-xl border border-blue-100">
-            <h4 className="text-lg font-semibold mb-3 text-blue-800">Chemistry's Role in the Solution</h4>
-            <p className="text-gray-700 mb-4">
-              Chemistry is central to developing circular solutions for plastics. Advances in polymer science are enabling:
+        <div className="grid md:grid-cols-2 gap-10">
+          <div className="space-y-6 opacity-0 animate-slide-up">
+            <h3 className="text-2xl font-semibold">Reduce, Reuse, Recycle</h3>
+            <p className="text-gray-600">
+              The cornerstone of addressing plastic pollution is reducing our reliance on single-use plastics.
+              This involves making conscious choices to reuse items and recycle plastics properly.
             </p>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="text-blue-600 flex-shrink-0">•</span>
-                <span><strong>Depolymerization catalysts</strong>: Breaking down polymers into their original monomers (C₁₀H₈O₄)n → nC₁₀H₈O₄</span>
+
+            <ul className="list-disc list-inside space-y-3 text-gray-600">
+              <li>
+                <strong>Reduce:</strong> Minimize consumption of single-use plastics like bags, bottles, and packaging.
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-blue-600 flex-shrink-0">•</span>
-                <span><strong>Bio-based feedstocks</strong>: Creating polymers from renewable rather than fossil resources</span>
+              <li>
+                <strong>Reuse:</strong> Opt for reusable alternatives such as water bottles, shopping bags, and food containers.
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-blue-600 flex-shrink-0">•</span>
-                <span><strong>Designed degradability</strong>: Engineering polymers that maintain performance during use but can be triggered to degrade under specific conditions</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-blue-600 flex-shrink-0">•</span>
-                <span><strong>Safer additives</strong>: Developing non-toxic alternatives to conventional plasticizers, stabilizers, and colorants</span>
+              <li>
+                <strong>Recycle:</strong> Properly dispose of recyclable plastics to ensure they are processed into new products.
               </li>
             </ul>
+
+            <div className="glass-card p-6">
+              <h4 className="text-xl font-semibold mb-4">Extended Producer Responsibility (EPR)</h4>
+              <p className="text-gray-600">
+                EPR schemes hold producers responsible for the end-of-life management of their products, incentivizing them
+                to design for recyclability and reduce waste.
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-6 opacity-0 animate-slide-up animation-delay-200">
+            <h3 className="text-2xl font-semibold">Technological Innovations</h3>
+            <p className="text-gray-600">
+              Advancements in technology offer promising solutions for capturing, breaking down, and preventing plastic pollution.
+            </p>
+
+            <ul className="list-disc list-inside space-y-3 text-gray-600">
+              <li>
+                <strong>Advanced Recycling:</strong> Chemical recycling technologies can break down plastics into their original
+                building blocks, allowing for the creation of virgin-quality plastics from waste.
+              </li>
+              <li>
+                <strong>Biodegradable Plastics:</strong> Development and adoption of biodegradable and compostable plastics made
+                from renewable resources can reduce the persistence of plastics in the environment.
+              </li>
+              <li>
+                <strong>Microplastic Filtration:</strong> Innovative filtration systems can capture microplastics from wastewater
+                treatment plants, preventing them from entering waterways.
+              </li>
+            </ul>
+
+            <div className="glass-card p-6">
+              <h4 className="text-xl font-semibold mb-4">Ocean Cleanup Technologies</h4>
+              <p className="text-gray-600">
+                Initiatives like The Ocean Cleanup are developing technologies to remove existing plastic debris from the oceans,
+                targeting both macroplastics and microplastics.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 glass-card p-8 opacity-0 animate-slide-up animation-delay-400">
+          <h3 className="text-2xl font-semibold mb-6 text-center">Policy and Regulation</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h4 className="font-semibold mb-2">Plastic Bag Bans</h4>
+              <p className="text-gray-600 text-sm">Implementing bans on single-use plastic bags to reduce their consumption and environmental impact.</p>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 13h6m-3-3v6m5 1a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h4 className="font-semibold mb-2">Taxation on Plastics</h4>
+              <p className="text-gray-600 text-sm">Imposing taxes on the production and use of virgin plastics to incentivize the use of recycled materials.</p>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4v-3a2 2 0 00-2-2H5z" />
+                </svg>
+              </div>
+              <h4 className="font-semibold mb-2">Standardization</h4>
+              <p className="text-gray-600 text-sm">Establishing standards for plastic recyclability and biodegradability to ensure consistent and effective waste management.</p>
+            </div>
           </div>
         </div>
       </div>

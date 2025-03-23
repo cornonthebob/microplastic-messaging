@@ -1,14 +1,14 @@
 
 import React from "react";
-import Hero from "@/components/Hero";
 import PageLayout from "@/components/PageLayout";
+import Solutions from "@/components/Solutions";
 
-const Index = () => {
+const SolutionsPage = () => {
   return (
     <PageLayout>
-      <Hero />
+      <Solutions />
     </PageLayout>
   );
 };
 
-export default Index;
+export default SolutionsPage;

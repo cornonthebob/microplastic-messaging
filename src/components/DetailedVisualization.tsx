@@ -99,7 +99,7 @@ const DetailedVisualization = () => {
   };
 
   return (
-    <section id="detailed-visualization" className="bg-gradient-to-br from-blue-50 to-teal-50 py-24 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-blue-50 to-teal-50 py-24 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-1/4 w-12 h-12 opacity-20 bg-blue-300 rounded-full animate-blob"></div>

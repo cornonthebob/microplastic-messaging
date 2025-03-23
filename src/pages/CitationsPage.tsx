@@ -1,14 +1,14 @@
 
 import React from "react";
-import Hero from "@/components/Hero";
 import PageLayout from "@/components/PageLayout";
+import Citations from "@/components/Citations";
 
-const Index = () => {
+const CitationsPage = () => {
   return (
     <PageLayout>
-      <Hero />
+      <Citations />
     </PageLayout>
   );
 };
 
-export default Index;
+export default CitationsPage;

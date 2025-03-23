@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface Citation {
@@ -117,7 +116,7 @@ const Citations = () => {
   const websites = citations.filter(citation => citation.type === 'web');
 
   return (
-    <section id="citations" className="bg-gray-50">
+    <section className="bg-gray-50">
       <div className="section-container">
         <div className="text-center mb-16 opacity-0 animate-fade-in">
           <span className="inline-flex items-center rounded-full px-4 py-1 text-xs font-medium bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">

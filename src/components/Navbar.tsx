@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 interface NavItem {
@@ -8,49 +9,28 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Microplastics', href: '#about' },
-  { label: 'Plastic Types', href: '#types' },
-  { label: 'Health Impact', href: '#health' },
-  { label: 'Interactive', href: '#interactive' },
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'Citations', href: '#citations' },
+  { label: 'Home', href: '/' },
+  { label: 'About Microplastics', href: '/about' },
+  { label: 'Plastic Types', href: '/types' },
+  { label: 'Health Impact', href: '/health' },
+  { label: 'Interactive', href: '/interactive' },
+  { label: 'Solutions', href: '/solutions' },
+  { label: 'Citations', href: '/citations' },
 ];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll('section[id]');
-      const scrollPosition = window.scrollY + 100;
-
-      sections.forEach((section) => {
-        const sectionTop = (section as HTMLElement).offsetTop;
-        const sectionHeight = (section as HTMLElement).offsetHeight;
-        const sectionId = section.getAttribute('id') || '';
-
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          setActiveSection(sectionId);
-        }
-      });
-
       setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const scrollToSection = (href: string) => {
-    setMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <header
@@ -60,27 +40,27 @@ const Navbar = () => {
       )}
     >
       <nav className="flex items-center justify-between max-w-7xl mx-auto">
-        <a href="#home" className="text-xl font-bold text-foreground flex items-center space-x-2">
+        <Link to="/" className="text-xl font-bold text-foreground flex items-center space-x-2">
           <span className="text-blue-600">Micro</span>
           <span>Plastic</span>
           <span className="text-blue-600">Awareness</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-1 items-center">
           {navItems.map((item) => (
-            <button
+            <Link
               key={item.href}
-              onClick={() => scrollToSection(item.href)}
+              to={item.href}
               className={cn(
                 'px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-blue-600',
-                activeSection === item.href.substring(1)
+                location.pathname === item.href
                   ? 'text-blue-600'
                   : 'text-foreground/80'
               )}
             >
               {item.label}
-            </button>
+            </Link>
           ))}
         </div>
 
@@ -120,18 +100,19 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 glass-effect border-t border-gray-100/20 py-2">
           {navItems.map((item) => (
-            <button
+            <Link
               key={item.href}
-              onClick={() => scrollToSection(item.href)}
+              to={item.href}
               className={cn(
                 'block w-full text-left px-6 py-3 text-sm transition-colors',
-                activeSection === item.href.substring(1)
+                location.pathname === item.href
                   ? 'text-blue-600 font-medium'
                   : 'text-foreground/80'
               )}
+              onClick={() => setMobileMenuOpen(false)}
             >
               {item.label}
-            </button>
+            </Link>
           ))}
         </div>
       )}

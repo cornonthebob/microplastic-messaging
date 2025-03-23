@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -60,7 +59,7 @@ const PlasticInfo = () => {
 
   return (
     <>
-      <section id="about" className="bg-white">
+      <section className="bg-white">
         <div className="section-container">
           <div className="text-center mb-16 opacity-0 animate-fade-in">
             <span className="inline-flex items-center rounded-full px-4 py-1 text-xs font-medium bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">
@@ -149,7 +148,7 @@ const PlasticInfo = () => {
         </div>
       </section>
 
-      <section id="types" className="bg-gray-50">
+      <section className="bg-gray-50">
         <div className="section-container">
           <div className="text-center mb-16 opacity-0 animate-fade-in">
             <span className="inline-flex items-center rounded-full px-4 py-1 text-xs font-medium bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">
@@ -276,7 +275,7 @@ const PlasticInfo = () => {
         </div>
       </section>
 
-      <section id="health" className="bg-white">
+      <section className="bg-white">
         <div className="section-container">
           <div className="text-center mb-16 opacity-0 animate-fade-in">
             <span className="inline-flex items-center rounded-full px-4 py-1 text-xs font-medium bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">
