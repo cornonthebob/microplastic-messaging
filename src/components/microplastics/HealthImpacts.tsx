@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Microscope, TestTubes, AlertTriangle } from 'lucide-react';
+import { Microscope, TestTubes, AlertTriangle, Fish, Droplets } from 'lucide-react';
 
 const HealthImpacts = () => {
   return (
