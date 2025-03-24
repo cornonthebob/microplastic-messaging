@@ -38,7 +38,7 @@ const PlasticInfo = () => {
       <div className="relative overflow-hidden">
         <AboutMicroplastics />
         
-        {/* Wave divider with fixed positioning and styling */}
+        {/* Wave divider with improved styling and shape */}
         <div className="relative h-24 w-full overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0 w-full" preserveAspectRatio="none">
             <path fill="rgba(236, 254, 255, 0.8)" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,128C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
@@ -47,7 +47,7 @@ const PlasticInfo = () => {
         
         <PlasticTypesDetail />
         
-        {/* Another wave divider with fixed styling */}
+        {/* Another wave divider with improved styling */}
         <div className="relative h-24 w-full overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0 w-full" preserveAspectRatio="none">
             <path fill="rgba(224, 242, 254, 0.5)" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,229.3C672,224,768,192,864,181.3C960,171,1056,181,1152,181.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>

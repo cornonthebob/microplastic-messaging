@@ -38,10 +38,10 @@ const PlasticTypesDetail = () => {
               <div key={plastic.id} className="flex flex-col items-center">
                 <div className="relative">
                   <div className={cn(
-                    "w-24 h-24 rounded-full flex items-center justify-center mb-3 transition-all duration-300 relative",
+                    "w-24 h-24 rounded-full flex items-center justify-center mb-3 transition-all duration-300 relative border-2",
                     activePlastic.id === plastic.id 
-                      ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20"
-                      : "bg-white text-gray-700 hover:bg-blue-50"
+                      ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20 border-blue-700"
+                      : "bg-white text-gray-700 hover:bg-blue-50 border-blue-200 hover:border-blue-400"
                   )}>
                     <button
                       onClick={() => setActivePlastic(plastic)}
@@ -78,10 +78,10 @@ const PlasticTypesDetail = () => {
               key={plastic.id}
               onClick={() => setActivePlastic(plastic)}
               className={cn(
-                "px-6 py-3 rounded-full transition-all",
+                "px-6 py-3 rounded-full transition-all border-2",
                 activePlastic.id === plastic.id
-                  ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20"
-                  : "bg-white text-gray-700 hover:bg-gray-100"
+                  ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20 border-blue-700"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border-blue-200 hover:border-blue-400"
               )}
             >
               {plastic.abbreviation}

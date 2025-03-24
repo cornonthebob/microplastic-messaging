@@ -20,11 +20,10 @@ const MicroplasticIllustration = () => {
         <div className="absolute w-4 h-4 rounded-full bg-teal-100/60 bottom-1/6 left-1/4 transform -rotate-6 floating-plastic animation-delay-600"></div>
         <div className="absolute w-6 h-2 rounded-md bg-blue-200/60 top-2/5 left-1/2 transform rotate-45 floating-plastic animation-delay-300"></div>
         
-        {/* Wave effect at bottom with fixed positioning */}
-        <div className="absolute bottom-0 left-0 w-full h-12">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
-            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" 
-                  fill="rgba(255,255,255,0.8)"></path>
+        {/* Wave effect at bottom - improved shape */}
+        <div className="absolute bottom-0 left-0 w-full">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className="w-full h-12">
+            <path fill="rgba(255,255,255,0.8)" fillOpacity="1" d="M0,128L48,149.3C96,171,192,213,288,218.7C384,224,480,192,576,170.7C672,149,768,139,864,154.7C960,171,1056,213,1152,213.3C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
           </svg>
         </div>
       </div>
