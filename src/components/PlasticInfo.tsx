@@ -4,6 +4,7 @@ import AboutMicroplastics from './microplastics/AboutMicroplastics';
 import PlasticTypesDetail from './microplastics/PlasticTypesDetail';
 import HealthImpacts from './microplastics/HealthImpacts';
 import MicroplasticIllustration from './microplastics/MicroplasticIllustration';
+import { Waves, FlaskConical, ShieldAlert } from 'lucide-react';
 
 const PlasticInfo = () => {
   return (
@@ -22,12 +23,59 @@ const PlasticInfo = () => {
           </div>
           
           <MicroplasticIllustration />
+          
+          {/* Floating plastic particles for visual effect */}
+          <div className="relative h-24 mt-12 mb-4">
+            <div className="absolute w-5 h-5 rounded-sm bg-blue-200/60 top-1/4 left-1/4 transform rotate-12 floating-plastic"></div>
+            <div className="absolute w-3 h-3 rounded-full bg-teal-300/60 top-2/3 right-1/3 transform -rotate-12 floating-plastic animation-delay-200"></div>
+            <div className="absolute w-6 h-2 rounded-md bg-blue-100/70 top-1/2 right-2/3 transform rotate-45 floating-plastic animation-delay-400"></div>
+            <div className="absolute w-4 h-4 rounded-sm bg-white/50 bottom-1/4 left-1/2 transform -rotate-12 floating-plastic animation-delay-300"></div>
+            <div className="absolute w-7 h-3 rounded-lg bg-teal-200/60 top-1/3 right-1/4 transform rotate-12 floating-plastic animation-delay-500"></div>
+          </div>
+          
+          {/* Water surface effect */}
+          <div className="relative h-12 w-full overflow-hidden mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0 w-full">
+              <path fill="rgba(224, 242, 254, 0.5)" d="M0,192L48,202.7C96,213,192,235,288,229.3C384,224,480,192,576,181.3C672,171,768,181,864,192C960,203,1056,213,1152,202.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+          </div>
         </div>
       </section>
       
-      <AboutMicroplastics />
-      <PlasticTypesDetail />
-      <HealthImpacts />
+      <div className="relative overflow-hidden">
+        <AboutMicroplastics />
+        
+        {/* Decorative wave divider between sections */}
+        <div className="relative h-24 w-full overflow-hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute -top-1 w-full" preserveAspectRatio="none">
+            <path fill="rgba(236, 254, 255, 0.8)" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,128C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+        </div>
+        
+        <PlasticTypesDetail />
+        
+        {/* Another decorative wave divider */}
+        <div className="relative h-24 w-full overflow-hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute -top-1 w-full" preserveAspectRatio="none">
+            <path fill="rgba(224, 242, 254, 0.5)" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,229.3C672,224,768,192,864,181.3C960,171,1056,181,1152,181.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+        </div>
+        
+        <HealthImpacts />
+        
+        {/* Bottom decorative elements */}
+        <div className="flex justify-center gap-12 py-10 bg-blue-50/50">
+          <div className="p-4 bg-white rounded-full shadow-lg">
+            <Waves className="w-8 h-8 text-blue-500" />
+          </div>
+          <div className="p-4 bg-white rounded-full shadow-lg">
+            <FlaskConical className="w-8 h-8 text-teal-500" />
+          </div>
+          <div className="p-4 bg-white rounded-full shadow-lg">
+            <ShieldAlert className="w-8 h-8 text-red-400" />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
