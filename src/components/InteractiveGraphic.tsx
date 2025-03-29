@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Beaker, FlaskConical, Wave, Wind, User, Microscope } from 'lucide-react';
+import { Beaker, FlaskConical, Waves, Wind, User, Microscope } from 'lucide-react';
 
 interface Stage {
   id: number;
@@ -43,7 +42,7 @@ const petStages: Stage[] = [
     description: "Microplastics move through ecosystems via water systems, wind, and other environmental processes. They can travel thousands of miles from their source. Riverine transport is a major pathway, with rivers acting as conveyor belts that transfer an estimated 1.15-2.41 million tons of plastic to oceans annually. Ocean currents distribute these particles globally, creating accumulation zones in subtropical gyres (like the Great Pacific Garbage Patch) where convergent currents concentrate floating debris. Vertical transport occurs through biofouling, which increases particle density causing sinking, and through marine snow—aggregates of organic matter that incorporate microplastics. Atmospheric transport has been documented with microplastics detected in remote mountain air and precipitation, carried by wind over vast distances. Estimates suggest that millions of tons of microplastics are stored in deep ocean sediments, acting as long-term sinks that preserve plastic pollution for geologic time scales.",
     chemistry: "Hydrophobic surface properties allow adsorption of pollutants: Microplastic-CH₂ + POPs → Microplastic-CH₂···POPs\nParticle density and size determine transport dynamics.\n\nBiofilm formation alters buoyancy:\nVirginal plastic (hydrophobic) → Surface conditioning (protein adsorption) → Bacterial colonization → Mature biofilm formation\nClean PE (0.92 g/cm³, floats) → Biofouled PE (>1.02 g/cm³, sinks)\n\nVertical mixing models:\nStokes' Law settling velocity: vs = (2gr²/9η)(ρp-ρf)\nWhere g = gravity, r = radius, η = fluid viscosity, ρp = particle density, ρf = fluid density",
     impact: "Microplastics have been found in every environment studied: deep sea trenches, mountain tops, Arctic ice, and remote wilderness. The ubiquity of microplastics means no ecosystem remains uncontaminated. Their presence has been documented in every major ocean basin from surface waters to hadal trenches 10,000+ meters deep. Atmospheric fallout deposits an estimated 1,000-3,000 tons of microplastics on protected areas in the western US annually. Vertical transport to deep ocean sediments effectively removes plastics from surface environments but creates long-term contamination of benthic ecosystems. Microplastics serve as vectors for invasive species and pathogens, allowing them to travel beyond their natural ranges ('plastic rafting'). Studies have found more than 1,200 species associated with marine plastic debris, including harmful algal bloom species and pathogenic bacteria. The 'Plastisphere'—microbial communities that colonize plastic surfaces—differ significantly from surrounding water communities and may include harmful bacteria such as Vibrio.",
-    icon: <Wave />
+    icon: <Waves />
   },
   {
     id: 5,
@@ -173,7 +172,7 @@ const InteractiveGraphic = () => {
             
             <div className="bg-blue-50 p-5 rounded-xl border border-blue-100">
               <h4 className="font-semibold text-lg mb-3 text-blue-700 flex items-center">
-                <Wave className="w-4 h-4 mr-2" />
+                <Waves className="w-4 h-4 mr-2" />
                 Environmental & Health Impact
               </h4>
               <p className="text-gray-700">{activeStage.impact}</p>
@@ -301,235 +300,4 @@ const InteractiveGraphic = () => {
                       <div className="w-5 h-5 bg-blue-200/60 rounded-sm transform rotate-12"></div>
                       <div className="w-4 h-4 bg-blue-200/60 rounded-sm transform -rotate-12"></div>
                       <div className="w-6 h-3 bg-blue-200/60 rounded-sm transform rotate-45"></div>
-                      <div className="w-3 h-3 bg-blue-200/60 rounded-sm transform -rotate-20"></div>
-                      <div className="w-4 h-5 bg-blue-200/60 rounded-sm transform rotate-30"></div>
-                      <div className="w-5 h-2 bg-blue-200/60 rounded-sm transform -rotate-5"></div>
-                    </div>
-                    <div className="absolute -bottom-6 text-xs font-medium text-center w-full">Microplastics</div>
-                  </div>
-                  
-                  <div className="absolute bottom-16 right-6">
-                    <div className="flex flex-wrap gap-1 max-w-[100px]">
-                      <div className="w-2 h-2 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1.5 h-1.5 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-2.5 h-1.5 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1 h-1 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1.5 h-2 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-2 h-1 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1 h-1.5 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1.5 h-1 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-2 h-1.5 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1 h-1 bg-blue-300/70 rounded-full"></div>
-                    </div>
-                    <div className="absolute -bottom-6 text-xs font-medium text-center w-full">Nanoplastics</div>
-                  </div>
-                  
-                  {/* Arrows showing the progression */}
-                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M90 50 L170 50" stroke="#93C5FD" strokeWidth="2" strokeDasharray="4">
-                      <animate attributeName="stroke-dashoffset" from="12" to="0" dur="2s" repeatCount="indefinite" />
-                    </path>
-                    <path d="M250 50 L330 120" stroke="#93C5FD" strokeWidth="2" strokeDasharray="4">
-                      <animate attributeName="stroke-dashoffset" from="12" to="0" dur="2s" repeatCount="indefinite" />
-                    </path>
-                    <path d="M80 120 L170 175" stroke="#93C5FD" strokeWidth="2" strokeDasharray="4">
-                      <animate attributeName="stroke-dashoffset" from="12" to="0" dur="2s" repeatCount="indefinite" />
-                    </path>
-                    <path d="M250 175 L330 175" stroke="#93C5FD" strokeWidth="2" strokeDasharray="4">
-                      <animate attributeName="stroke-dashoffset" from="12" to="0" dur="2s" repeatCount="indefinite" />
-                    </path>
-                  </svg>
-                </div>
-              </div>
-            )}
-
-            {activeStage.id === 4 && (
-              <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
-                <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-blue-200 rounded-lg overflow-hidden">
-                  {/* Earth-like representation with transport routes */}
-                  <div className="absolute w-full h-24 bottom-0 bg-blue-500/30"></div>
-                  
-                  {/* Landmass */}
-                  <div className="absolute left-8 bottom-24 w-32 h-12 bg-green-200 rounded-t-lg"></div>
-                  <div className="absolute right-12 bottom-24 w-40 h-14 bg-green-200 rounded-t-lg"></div>
-                  
-                  {/* Rivers */}
-                  <div className="absolute left-20 bottom-24 w-1 h-20 bg-blue-400 transform rotate-30"></div>
-                  <div className="absolute right-20 bottom-24 w-1 h-16 bg-blue-400 transform -rotate-20"></div>
-                  
-                  {/* Transport paths with animated particles */}
-                  <div className="absolute left-0 right-0 bottom-12 h-px bg-white/50">
-                    <div className="absolute w-1.5 h-1.5 bg-white rounded-full animate-[move-right_15s_linear_infinite]"></div>
-                    <div className="absolute w-1 h-1 bg-white rounded-full animate-[move-right_12s_linear_infinite_2s]"></div>
-                    <div className="absolute w-2 h-2 bg-white rounded-full animate-[move-right_18s_linear_infinite_4s]"></div>
-                  </div>
-                  
-                  <div className="absolute left-20 top-24 right-20 h-px bg-white/40">
-                    <div className="absolute w-1.5 h-1.5 bg-white rounded-full animate-[move-left_20s_linear_infinite]"></div>
-                    <div className="absolute w-1 h-1 bg-white rounded-full animate-[move-left_15s_linear_infinite_3s]"></div>
-                  </div>
-                  
-                  <div className="absolute left-12 top-12 bottom-24 w-px bg-white/30">
-                    <div className="absolute w-1 h-1 bg-white rounded-full animate-[move-down_12s_linear_infinite]"></div>
-                    <div className="absolute w-1.5 h-1.5 bg-white rounded-full animate-[move-down_10s_linear_infinite_1s]"></div>
-                  </div>
-                  
-                  <div className="absolute right-16 top-16 bottom-24 w-px bg-white/30">
-                    <div className="absolute w-1 h-1 bg-white rounded-full animate-[move-up_12s_linear_infinite]"></div>
-                    <div className="absolute w-1.5 h-1.5 bg-white rounded-full animate-[move-up_14s_linear_infinite_2s]"></div>
-                  </div>
-                  
-                  {/* Labels */}
-                  <div className="absolute top-4 left-1/4 transform -translate-x-1/2 text-xs font-medium bg-white/80 rounded px-2 py-1 shadow-sm">
-                    Atmospheric Transport
-                  </div>
-                  <div className="absolute right-6 top-1/3 text-xs font-medium bg-white/80 rounded px-2 py-1 shadow-sm">
-                    Wind Patterns
-                  </div>
-                  <div className="absolute left-6 bottom-4 text-xs font-medium bg-white/80 rounded px-2 py-1 shadow-sm">
-                    Ocean Currents
-                  </div>
-                  <div className="absolute right-10 bottom-28 text-xs font-medium bg-white/80 rounded px-2 py-1 shadow-sm">
-                    River Transport
-                  </div>
-                </div>
-                
-                {/* Keyframes for particle animations */}
-                <style jsx>{`
-                  @keyframes move-right {
-                    from { left: 0; }
-                    to { left: 100%; }
-                  }
-                  @keyframes move-left {
-                    from { right: 0; }
-                    to { right: 100%; }
-                  }
-                  @keyframes move-down {
-                    from { top: 0; }
-                    to { top: 100%; }
-                  }
-                  @keyframes move-up {
-                    from { bottom: 0; }
-                    to { bottom: 100%; }
-                  }
-                `}</style>
-              </div>
-            )}
-
-            {activeStage.id === 5 && (
-              <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
-                <div className="absolute inset-0 bg-white rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    {/* Human silhouette with exposure routes */}
-                    <div className="relative h-48 w-28">
-                      {/* Human outline */}
-                      <svg width="120" height="220" viewBox="0 0 120 220" className="absolute -top-10 -left-10">
-                        <path d="M60 20 C73 20 83 30 83 43 C83 56 73 65 60 65 C47 65 37 56 37 43 C37 30 47 20 60 20 Z" 
-                              fill="#E5E7EB" stroke="#9CA3AF" strokeWidth="2"/>
-                        <path d="M60 65 L60 140 M40 85 L80 85 M45 180 L60 140 L75 180 M50 100 L30 130 M70 100 L90 130" 
-                              stroke="#9CA3AF" strokeWidth="2" fill="none"/>
-                      </svg>
-                      
-                      {/* Ingestion route */}
-                      <div className="absolute left-1/2 top-1/4 transform -translate-x-1/2 w-10 h-10 rounded-lg bg-red-100 border border-red-300 flex items-center justify-center">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-red-500">
-                          <path d="M18 8h1a4 4 0 0 1 0 8h-1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          <line x1="6" y1="1" x2="6" y2="4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          <line x1="10" y1="1" x2="10" y2="4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          <line x1="14" y1="1" x2="14" y2="4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                        <div className="absolute -right-20 text-xs font-medium">Ingestion</div>
-                      </div>
-                      
-                      {/* Inhalation route */}
-                      <div className="absolute left-1/2 top-1/6 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-lg bg-blue-100 border border-blue-300 flex items-center justify-center">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-blue-500">
-                          <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" strokeWidth="2"/>
-                          <path d="M6 12c0-4.418 3.582-8 8-8" strokeWidth="2" strokeLinecap="round"/>
-                          <path d="M14 10c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2" strokeWidth="2" strokeLinecap="round"/>
-                        </svg>
-                        <div className="absolute -left-20 text-xs font-medium">Inhalation</div>
-                      </div>
-                      
-                      {/* Dermal route */}
-                      <div className="absolute right-0 top-1/3 w-10 h-10 rounded-lg bg-green-100 border border-green-300 flex items-center justify-center">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-green-500">
-                          <path d="M21 12c0 4.418-4.03 8-9 8s-9-3.582-9-8" strokeWidth="2" strokeLinecap="round"/>
-                          <path d="M3 16c0 1.105 7.5 1 9 0 1.5-1 1.5-8 3-8 1.5 0 1.5 7 3 8 1.5 1 9 1.105 9 0" strokeWidth="2" strokeLinecap="round"/>
-                        </svg>
-                        <div className="absolute -right-16 text-xs font-medium">Dermal</div>
-                      </div>
-                      
-                      {/* Microplastic particles */}
-                      <div className="absolute w-2 h-2 bg-blue-400/60 rounded-full top-1/6 right-1/4 animate-pulse-slow"></div>
-                      <div className="absolute w-1.5 h-1.5 bg-red-400/60 rounded-full top-1/4 left-1/4 animate-pulse-slow animation-delay-300"></div>
-                      <div className="absolute w-2 h-2 bg-green-400/60 rounded-full top-1/3 right-1/6 animate-pulse-slow animation-delay-500"></div>
-                      <div className="absolute w-1 h-1 bg-blue-400/60 rounded-full top-2/5 left-1/6 animate-pulse-slow animation-delay-200"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {activeStage.id === 6 && (
-              <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-orange-50 rounded-lg overflow-hidden">
-                  {/* Cell visualization */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative w-40 h-40 rounded-full bg-orange-100/60 border-4 border-orange-200/60 flex items-center justify-center">
-                      {/* Cell nucleus */}
-                      <div className="w-16 h-16 rounded-full bg-orange-300/70 border border-orange-400/50 flex items-center justify-center">
-                        <div className="w-6 h-6 rounded-full bg-orange-400/70"></div>
-                      </div>
-                      
-                      {/* Cell organelles */}
-                      <div className="absolute top-1/4 left-1/4 w-6 h-4 rounded-full bg-orange-200/80 border border-orange-300/50 transform rotate-30"></div>
-                      <div className="absolute bottom-1/3 right-1/4 w-5 h-3 rounded-full bg-orange-200/80 border border-orange-300/50 transform -rotate-15"></div>
-                      <div className="absolute top-1/3 right-1/5 w-4 h-4 rounded-full bg-orange-200/80 border border-orange-300/50"></div>
-                      <div className="absolute bottom-1/4 left-1/5 w-5 h-5 rounded-full bg-orange-200/80 border border-orange-300/50"></div>
-                      
-                      {/* Microplastic particles invading the cell */}
-                      <div className="absolute w-3 h-3 bg-blue-500/40 rounded-sm top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-[invade_8s_ease-in_infinite]"></div>
-                      <div className="absolute w-2 h-2 bg-blue-500/50 rounded-sm right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 animate-[invade_10s_ease-in_infinite_2s]"></div>
-                      <div className="absolute w-2.5 h-2.5 bg-blue-500/60 rounded-sm bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 animate-[invade_9s_ease-in_infinite_1s]"></div>
-                      
-                      {/* Microplastic inside cell */}
-                      <div className="absolute w-2 h-2 bg-blue-600/60 rounded-sm top-1/3 left-1/3 animate-pulse-slow"></div>
-                      <div className="absolute w-1.5 h-1.5 bg-blue-600/70 rounded-sm bottom-1/3 right-1/3 animate-pulse-slow animation-delay-400"></div>
-                    </div>
-                  </div>
-                  
-                  {/* Labels */}
-                  <div className="absolute top-4 left-4 text-xs font-medium bg-white/80 rounded px-2 py-1 shadow-sm">
-                    Cell Membrane
-                  </div>
-                  <div className="absolute top-1/2 left-3/4 transform -translate-y-1/2 text-xs font-medium bg-white/80 rounded px-2 py-1 shadow-sm">
-                    Microplastic Invasion
-                  </div>
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-xs font-medium bg-white/80 rounded px-2 py-1 shadow-sm">
-                    Cytoplasm
-                  </div>
-                  <div className="absolute top-1/2 left-1/4 transform -translate-y-1/2 text-xs font-medium bg-white/80 rounded px-2 py-1 shadow-sm">
-                    Nucleus
-                  </div>
-                </div>
-                
-                {/* Keyframes for invasion animation */}
-                <style jsx>{`
-                  @keyframes invade {
-                    0% { transform: translate(-50%, -200%); }
-                    70% { transform: translate(-50%, -50%); }
-                    100% { transform: translate(-10%, -10%); opacity: 0; }
-                  }
-                `}</style>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default InteractiveGraphic;
+                      <div className="w-3 h-3 bg-blue-200/60
