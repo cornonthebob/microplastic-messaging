@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Beaker, FlaskConical, Waves, Wind, User, Microscope } from 'lucide-react';
@@ -300,4 +301,218 @@ const InteractiveGraphic = () => {
                       <div className="w-5 h-5 bg-blue-200/60 rounded-sm transform rotate-12"></div>
                       <div className="w-4 h-4 bg-blue-200/60 rounded-sm transform -rotate-12"></div>
                       <div className="w-6 h-3 bg-blue-200/60 rounded-sm transform rotate-45"></div>
-                      <div className="w-3 h-3 bg-blue-200/60
+                      <div className="w-3 h-3 bg-blue-200/60 rounded-sm"></div>
+                      <div className="w-5 h-2 bg-blue-200/60 rounded-sm transform -rotate-20"></div>
+                      <div className="w-4 h-4 bg-blue-200/60 rounded-sm"></div>
+                    </div>
+                    <div className="absolute -bottom-6 text-xs font-medium text-center w-full">Microplastics</div>
+                  </div>
+                  
+                  <div className="absolute bottom-16 right-6">
+                    <div className="flex flex-wrap gap-1 max-w-[100px] justify-center">
+                      <div className="w-2 h-2 bg-blue-300/70 rounded-full"></div>
+                      <div className="w-1 h-1 bg-blue-300/70 rounded-full"></div>
+                      <div className="w-2 h-1 bg-blue-300/70 rounded-full"></div>
+                      <div className="w-1 h-1 bg-blue-300/70 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-blue-300/70 rounded-full"></div>
+                      <div className="w-1 h-1 bg-blue-300/70 rounded-full"></div>
+                      <div className="w-2 h-1 bg-blue-300/70 rounded-full"></div>
+                      <div className="w-1 h-1 bg-blue-300/70 rounded-full"></div>
+                      <div className="w-1 h-1 bg-blue-300/70 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-blue-300/70 rounded-full"></div>
+                    </div>
+                    <div className="absolute -bottom-6 text-xs font-medium text-center w-full">Nanoplastics</div>
+                  </div>
+                  
+                  {/* Flow arrows */}
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100 40 L200 40" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
+                    <path d="M300 40 L350 80" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
+                    <path d="M80 80 L40 140" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
+                    <path d="M300 80 L250 140" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
+                  </svg>
+                </div>
+              </div>
+            )}
+            
+            {activeStage.id === 4 && (
+              <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
+                <div className="absolute inset-0 bg-gradient-to-b from-blue-100 to-blue-300 rounded-lg overflow-hidden">
+                  {/* Water surface */}
+                  <div className="absolute top-0 inset-x-0 h-1/2 bg-gradient-to-b from-blue-50 to-blue-200"></div>
+                  
+                  {/* Underwater section */}
+                  <div className="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-b from-blue-200 to-blue-400"></div>
+                  
+                  {/* Surface wave line */}
+                  <svg className="absolute top-1/2 inset-x-0 h-4 w-full" viewBox="0 0 400 20" preserveAspectRatio="none">
+                    <path d="M0,10 Q40,0 80,10 T160,10 T240,10 T320,10 T400,10" stroke="white" strokeWidth="2" fill="none" />
+                  </svg>
+                  
+                  {/* Microplastic particles floating and sinking */}
+                  <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
+                  <div className="absolute top-1/3 right-1/4 w-3 h-1 bg-white/40 rounded-full animate-pulse animation-delay-300"></div>
+                  <div className="absolute top-2/5 left-1/3 w-1 h-1 bg-white/30 rounded-full animate-pulse animation-delay-600"></div>
+                  <div className="absolute top-2/5 right-1/3 w-2 h-2 bg-white/20 rounded-full animate-pulse animation-delay-900"></div>
+                  
+                  {/* Sinking particles */}
+                  <div className="absolute top-3/5 left-1/5 w-2 h-2 bg-white/30 rounded-full animate-drift-down"></div>
+                  <div className="absolute top-3/5 right-1/5 w-1 h-1 bg-white/40 rounded-full animate-drift-down animation-delay-500"></div>
+                  <div className="absolute top-3/4 left-2/5 w-2 h-1 bg-white/30 rounded-full"></div>
+                  <div className="absolute top-3/4 right-2/5 w-1 h-1 bg-white/20 rounded-full"></div>
+                  
+                  {/* Ocean floor sediments */}
+                  <div className="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-b from-stone-300/30 to-stone-400/40"></div>
+                  <div className="absolute bottom-0 left-1/6 w-20 h-4 bg-stone-300/20 rounded-t-lg"></div>
+                  <div className="absolute bottom-0 right-1/4 w-16 h-3 bg-stone-300/20 rounded-t-lg"></div>
+                  
+                  {/* Transport labels */}
+                  <div className="absolute top-6 left-1/2 transform -translate-x-1/2 text-xs font-semibold bg-white/80 rounded px-3 py-1 shadow-sm">
+                    Atmospheric Transport
+                  </div>
+                  <div className="absolute top-1/3 right-6 text-xs font-semibold bg-white/80 rounded px-3 py-1 shadow-sm">
+                    Surface Currents
+                  </div>
+                  <div className="absolute bottom-1/3 left-6 text-xs font-semibold bg-white/80 rounded px-3 py-1 shadow-sm">
+                    Vertical Transport
+                  </div>
+                  <div className="absolute bottom-8 right-1/4 text-xs font-semibold bg-white/80 rounded px-3 py-1 shadow-sm">
+                    Sediment Accumulation
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            {activeStage.id === 5 && (
+              <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
+                <div className="absolute inset-0 bg-white rounded-lg overflow-hidden border border-gray-100">
+                  {/* Human silhouette */}
+                  <div className="absolute inset-x-0 top-4 flex justify-center">
+                    <div className="relative">
+                      <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M70 30 A15 15 0 0 1 70 60 A15 15 0 0 1 70 30" fill="#E2E8F0"/>
+                        <path d="M70 60 L70 110" stroke="#E2E8F0" strokeWidth="20" strokeLinecap="round"/>
+                        <path d="M70 70 L40 90" stroke="#E2E8F0" strokeWidth="10" strokeLinecap="round"/>
+                        <path d="M70 70 L100 90" stroke="#E2E8F0" strokeWidth="10" strokeLinecap="round"/>
+                        <path d="M70 110 L50 140" stroke="#E2E8F0" strokeWidth="10" strokeLinecap="round"/>
+                        <path d="M70 110 L90 140" stroke="#E2E8F0" strokeWidth="10" strokeLinecap="round"/>
+                      </svg>
+                      
+                      {/* Microplastic exposure points */}
+                      <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-20 h-20">
+                        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                          <div className="w-4 h-4 bg-blue-100 rounded-full flex items-center justify-center">
+                            <div className="w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+                          </div>
+                          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap text-xs font-medium bg-blue-50 rounded px-2 py-0.5 border border-blue-100">
+                            Inhalation
+                          </div>
+                        </div>
+                        
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                          <div className="w-4 h-4 bg-green-100 rounded-full flex items-center justify-center">
+                            <div className="w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-300"></div>
+                          </div>
+                          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap text-xs font-medium bg-green-50 rounded px-2 py-0.5 border border-green-100">
+                            Ingestion
+                          </div>
+                        </div>
+                        
+                        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+                          <div className="w-4 h-4 bg-red-100 rounded-full flex items-center justify-center">
+                            <div className="w-2 h-2 bg-red-400 rounded-full animate-ping animation-delay-600"></div>
+                          </div>
+                          <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap text-xs font-medium bg-red-50 rounded px-2 py-0.5 border border-red-100">
+                            Dermal Contact
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Exposure source examples */}
+                  <div className="absolute bottom-4 left-4 flex flex-col gap-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+                      <span className="text-xs text-gray-600">Ambient Air</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                      <span className="text-xs text-gray-600">Food & Water</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                      <span className="text-xs text-gray-600">Textiles & Products</span>
+                    </div>
+                  </div>
+                  
+                  {/* Exposure statistics */}
+                  <div className="absolute bottom-4 right-4 bg-gray-50 rounded-lg p-2 border border-gray-100 max-w-[150px]">
+                    <p className="text-xs text-gray-900 font-semibold mb-1">Weekly Human Intake:</p>
+                    <p className="text-xs text-gray-600">~5g of plastic</p>
+                    <p className="text-xs text-gray-600 font-medium mt-1">(equivalent to a credit card)</p>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            {activeStage.id === 6 && (
+              <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg overflow-hidden">
+                  {/* Cell background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-purple-50 opacity-70"></div>
+                  
+                  {/* Cell membrane */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border-4 border-purple-200/60"></div>
+                  
+                  {/* Cell nucleus */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-purple-200/40 border border-purple-300/30"></div>
+                  
+                  {/* Cell organelles */}
+                  <div className="absolute top-1/3 left-1/3 w-8 h-5 rounded-full bg-green-200/40 border border-green-300/30"></div>
+                  <div className="absolute bottom-1/3 right-1/3 w-10 h-6 rounded-full bg-green-200/40 border border-green-300/30"></div>
+                  <div className="absolute top-2/3 right-1/4 w-6 h-4 rounded-full bg-green-200/40 border border-green-300/30"></div>
+                  
+                  {/* Microplastic particles */}
+                  <div className="absolute top-2/5 left-1/3 w-3 h-3 bg-blue-400/60 rounded-sm transform rotate-12"></div>
+                  <div className="absolute bottom-2/5 right-1/3 w-2 h-2 bg-blue-400/60 rounded-full"></div>
+                  
+                  {/* Nanoplastic particles */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-blue-500/70 rounded-full"></div>
+                  <div className="absolute top-2/5 right-2/5 w-1 h-1 bg-blue-500/70 rounded-full"></div>
+                  
+                  {/* Cellular interaction labels */}
+                  <div className="absolute top-6 left-1/2 transform -translate-x-1/2 text-xs font-semibold bg-white/90 rounded px-3 py-1 shadow-sm">
+                    Cellular Interactions
+                  </div>
+                  
+                  <div className="absolute top-1/4 left-6 text-xs font-medium bg-white/80 rounded px-2 py-0.5 shadow-sm">
+                    Endocytosis
+                  </div>
+                  
+                  <div className="absolute bottom-1/4 right-6 text-xs font-medium bg-white/80 rounded px-2 py-0.5 shadow-sm">
+                    ROS Generation
+                  </div>
+                  
+                  <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-medium bg-red-50/90 text-red-500 rounded px-2 py-0.5 shadow-sm">
+                    Inflammatory Response
+                  </div>
+                  
+                  {/* ROS visualization */}
+                  <div className="absolute bottom-1/3 right-1/4">
+                    <div className="relative w-6 h-6">
+                      <div className="absolute inset-0 w-4 h-4 bg-yellow-200/40 rounded-full animate-ping"></div>
+                      <div className="absolute inset-0 w-4 h-4 bg-orange-200/20 rounded-full animate-ping animation-delay-500"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default InteractiveGraphic;
