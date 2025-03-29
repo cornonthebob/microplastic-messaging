@@ -67,24 +67,55 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Microplastic illustration at bottom - enhanced with more visual elements */}
-      <div className="absolute bottom-24 left-0 right-0 h-40 opacity-0 animate-fade-in animation-delay-600">
-        <div className="relative max-w-3xl mx-auto h-full">
-          {/* Water-like base with microplastics */}
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-blue-100/50 to-transparent rounded-2xl overflow-hidden">
-            {/* Floating plastic particles - enhanced with more particles */}
-            <div className="absolute w-5 h-5 rounded-sm bg-white/30 top-1/3 left-1/4 transform -rotate-12 floating-plastic"></div>
-            <div className="absolute w-4 h-4 rounded-full bg-teal-200/40 bottom-1/4 right-1/3 transform rotate-45 floating-plastic animation-delay-300"></div>
-            <div className="absolute w-6 h-2 rounded-md bg-blue-200/30 top-1/2 right-1/4 transform rotate-12 floating-plastic animation-delay-500"></div>
-            <div className="absolute w-3 h-3 rounded-sm bg-white/20 bottom-1/3 left-2/3 transform -rotate-6 floating-plastic animation-delay-200"></div>
-            <div className="absolute w-4 h-4 rounded-full bg-teal-100/30 top-1/4 right-1/5 transform rotate-12 floating-plastic animation-delay-400"></div>
+      {/* Improved ocean visualization at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 overflow-hidden opacity-0 animate-fade-in animation-delay-500">
+        <div className="relative h-full">
+          {/* Ocean base gradient */}
+          <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-blue-300/50 via-blue-200/30 to-transparent"></div>
+          
+          {/* Improved wave effect */}
+          <div className="absolute bottom-0 left-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full" preserveAspectRatio="none">
+              <path fill="rgba(240, 249, 255, 0.7)" d="M0,160L48,149.3C96,139,192,117,288,117.3C384,117,480,139,576,165.3C672,192,768,224,864,224C960,224,1056,192,1152,176C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full absolute bottom-0" preserveAspectRatio="none">
+              <path fill="white" d="M0,192L60,197.3C120,203,240,213,360,229.3C480,245,600,267,720,261.3C840,256,960,224,1080,213.3C1200,203,1320,213,1380,218.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
           </div>
           
-          {/* Wave overlay with improved positioning */}
-          <div className="absolute bottom-0 left-0 w-full h-12 overflow-hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-full" preserveAspectRatio="none">
-              <path fill="rgba(224, 242, 254, 0.5)" d="M0,128L48,117.3C96,107,192,85,288,85.3C384,85,480,107,576,133.3C672,160,768,192,864,186.7C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
+          {/* Ocean decorative elements */}
+          <div className="absolute inset-x-0 bottom-10 h-20 overflow-hidden">
+            {/* Floating microplastics in ocean */}
+            <div className="absolute w-8 h-2 rounded-md bg-blue-200/40 left-1/5 bottom-1/2 transform rotate-12 floating-plastic"></div>
+            <div className="absolute w-4 h-4 rounded-full bg-teal-200/30 right-1/4 bottom-1/3 transform -rotate-6 floating-plastic animation-delay-500"></div>
+            <div className="absolute w-6 h-6 rounded-sm bg-white/20 left-1/2 bottom-1/4 transform rotate-45 floating-plastic animation-delay-700"></div>
+            <div className="absolute w-5 h-3 rounded-md bg-blue-100/30 right-1/3 bottom-1/2 transform -rotate-12 floating-plastic animation-delay-400"></div>
+            
+            {/* Plastic bottle outline */}
+            <div className="absolute right-1/4 bottom-4">
+              <svg width="30" height="50" viewBox="0 0 30 50" stroke="rgba(147, 197, 253, 0.5)" fill="none" className="transform rotate-12 swimming-fish">
+                <path d="M10 10 V5 H20 V10 C20 10 25 15 25 20 C25 25 22.5 35 20 45 C17.5 55 15 55 15 55 C15 55 12.5 55 10 45 C7.5 35 5 25 5 20 C5 15 10 10 10 10 Z" strokeWidth="1" />
+              </svg>
+            </div>
+            
+            {/* Swimming fish */}
+            <div className="absolute left-1/4 bottom-8">
+              <svg width="30" height="20" viewBox="0 0 30 20" stroke="rgba(79, 195, 247, 0.7)" fill="rgba(79, 195, 247, 0.2)" className="swimming-fish">
+                <path d="M5 10 C5 10 10 0 20 10 C10 20 5 10 5 10 Z" strokeWidth="1" />
+                <path d="M22 10 L28 15" strokeWidth="1" />
+                <path d="M22 10 L28 5" strokeWidth="1" />
+                <circle cx="7" cy="8" r="1" fill="rgba(79, 195, 247, 0.7)" />
+              </svg>
+            </div>
+            
+            <div className="absolute right-1/3 bottom-12">
+              <svg width="20" height="12" viewBox="0 0 20 12" stroke="rgba(79, 195, 247, 0.6)" fill="rgba(79, 195, 247, 0.15)" className="swimming-reverse">
+                <path d="M15 6 C15 6 10 0 5 6 C10 12 15 6 15 6 Z" strokeWidth="1" />
+                <path d="M3 6 L0 8" strokeWidth="1" />
+                <path d="M3 6 L0 4" strokeWidth="1" />
+                <circle cx="13" cy="5" r="0.5" fill="rgba(79, 195, 247, 0.6)" />
+              </svg>
+            </div>
           </div>
           
           {/* Decorative icons */}
@@ -96,28 +127,6 @@ const Hero = () => {
           </div>
           <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-full shadow-lg">
             <Waves className="w-5 h-5 text-blue-400" />
-          </div>
-        </div>
-      </div>
-
-      {/* New microplastic visual element */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden">
-        <div className="relative h-full max-w-screen-xl mx-auto">
-          <div className="absolute inset-x-0 bottom-0 h-full">
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-50/80 to-transparent"></div>
-            
-            {/* Additional floating microplastic particles */}
-            <div className="absolute w-8 h-2 rounded-md bg-blue-200/40 left-1/5 bottom-1/3 transform rotate-12"></div>
-            <div className="absolute w-4 h-4 rounded-full bg-teal-200/30 right-1/4 bottom-1/2 transform -rotate-6"></div>
-            <div className="absolute w-6 h-6 rounded-sm bg-white/20 left-1/2 bottom-1/4 transform rotate-45"></div>
-            <div className="absolute w-5 h-3 rounded-md bg-blue-100/30 right-1/3 bottom-1/6 transform -rotate-12"></div>
-            
-            {/* Improved wave effect at bottom */}
-            <div className="absolute bottom-0 left-0 w-full">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full" preserveAspectRatio="none">
-                <path fill="white" d="M0,192L40,186.7C80,181,160,171,240,186.7C320,203,400,245,480,261.3C560,277,640,267,720,234.7C800,203,880,149,960,144C1040,139,1120,181,1200,192C1280,203,1360,181,1400,170.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
-              </svg>
-            </div>
           </div>
         </div>
       </div>
