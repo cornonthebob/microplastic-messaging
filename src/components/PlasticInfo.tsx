@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AboutMicroplastics from './microplastics/AboutMicroplastics';
 import PlasticTypesDetail from './microplastics/PlasticTypesDetail';
@@ -14,11 +13,10 @@ const PlasticInfo = () => {
         <div className="section-container relative z-10">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-500">
-              The Microplastic Crisis
+              Microplastic Crisis
             </h1>
             <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
-              Microscopic plastic particles are infiltrating every corner of our planet and our bodies.
-              Discover the science behind this growing environmental and health challenge.
+              Microscopic plastic particles are invading our planet and bodies. Explore the science behind this environmental challenge.
             </p>
           </div>
           

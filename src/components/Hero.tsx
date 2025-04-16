@@ -1,17 +1,9 @@
-
 import React from 'react';
 import { ArrowDown, Droplets, Fish, Waves } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
-  const scrollToAbout = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-
   return (
     <section id="home" className="relative min-h-screen-small flex items-center justify-center overflow-hidden">
       {/* Background Elements */}
@@ -28,7 +20,6 @@ const Hero = () => {
         <div className="absolute w-4 h-4 rounded-sm bg-white/30 bottom-1/2 left-1/3 transform rotate-12 floating-plastic animation-delay-600"></div>
         <div className="absolute w-5 h-2 rounded-md bg-blue-300/40 top-2/3 right-1/3 transform -rotate-6 floating-plastic animation-delay-200"></div>
         <div className="absolute w-2 h-5 rounded-sm bg-teal-200/30 bottom-1/4 right-1/4 transform rotate-45 floating-plastic animation-delay-400"></div>
-        {/* Additional microplastic particles */}
         <div className="absolute w-4 h-4 rounded-md bg-blue-100/40 top-1/4 right-1/5 transform rotate-12 floating-plastic animation-delay-100"></div>
         <div className="absolute w-3 h-6 rounded-sm bg-teal-200/30 bottom-1/3 left-1/5 transform -rotate-6 floating-plastic animation-delay-500"></div>
         <div className="absolute w-5 h-5 rounded-full bg-white/20 top-1/2 right-1/2 transform rotate-45 floating-plastic animation-delay-700"></div>
@@ -37,17 +28,17 @@ const Hero = () => {
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <div className="inline-block animate-fade-in-slow">
-            <span className="inline-flex items-center rounded-full px-4 py-1 text-xs font-medium bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-6">
+            <span className="inline-flex items-center rounded-full px-4 py-1 text-xs font-medium bg-blue-50 text-blue-700 mb-6">
               Environmental Crisis
             </span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6 opacity-0 animate-fade-in">
-            <span className="text-blue-600">Microplastics</span>: The Invisible Threat
+            <span className="text-blue-600">Microplastics</span>: The Hidden Threat
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8 opacity-0 animate-fade-in animation-delay-200">
-            Tiny plastic particles are infiltrating our environment and bodies. Discover what they are, how they affect us, and what we can do about them.
+            Tiny plastic particles are infiltrating our environment and bodies. Discover their impact and solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in animation-delay-400">
@@ -85,20 +76,17 @@ const Hero = () => {
           
           {/* Ocean decorative elements */}
           <div className="absolute inset-x-0 bottom-10 h-20 overflow-hidden">
-            {/* Floating microplastics in ocean */}
             <div className="absolute w-8 h-2 rounded-md bg-blue-200/40 left-1/5 bottom-1/2 transform rotate-12 floating-plastic"></div>
             <div className="absolute w-4 h-4 rounded-full bg-teal-200/30 right-1/4 bottom-1/3 transform -rotate-6 floating-plastic animation-delay-500"></div>
             <div className="absolute w-6 h-6 rounded-sm bg-white/20 left-1/2 bottom-1/4 transform rotate-45 floating-plastic animation-delay-700"></div>
             <div className="absolute w-5 h-3 rounded-md bg-blue-100/30 right-1/3 bottom-1/2 transform -rotate-12 floating-plastic animation-delay-400"></div>
             
-            {/* Plastic bottle outline */}
             <div className="absolute right-1/4 bottom-4">
               <svg width="30" height="50" viewBox="0 0 30 50" stroke="rgba(147, 197, 253, 0.5)" fill="none" className="transform rotate-12 swimming-fish">
                 <path d="M10 10 V5 H20 V10 C20 10 25 15 25 20 C25 25 22.5 35 20 45 C17.5 55 15 55 15 55 C15 55 12.5 55 10 45 C7.5 35 5 25 5 20 C5 15 10 10 10 10 Z" strokeWidth="1" />
               </svg>
             </div>
             
-            {/* Swimming fish */}
             <div className="absolute left-1/4 bottom-8">
               <svg width="30" height="20" viewBox="0 0 30 20" stroke="rgba(79, 195, 247, 0.7)" fill="rgba(79, 195, 247, 0.2)" className="swimming-fish">
                 <path d="M5 10 C5 10 10 0 20 10 C10 20 5 10 5 10 Z" strokeWidth="1" />
@@ -118,7 +106,6 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Decorative icons */}
           <div className="absolute -bottom-2 left-1/4 bg-white p-3 rounded-full shadow-lg transform -rotate-6">
             <Fish className="w-5 h-5 text-blue-600" />
           </div>

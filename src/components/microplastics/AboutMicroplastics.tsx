@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Droplets, Microscope, FlaskConical } from 'lucide-react';
 
@@ -20,7 +19,7 @@ const AboutMicroplastics = () => {
           <div className="space-y-6 opacity-0 animate-slide-up animation-delay-200">
             <h3 className="text-2xl font-semibold">What Are Microplastics?</h3>
             <p className="text-gray-600">
-              Microplastics are tiny plastic particles less than 5mm in diameter, barely visible to the naked eye. They come in various forms including fragments, fibers, beads, films, and foams. These minuscule particles are created either intentionally for products (primary microplastics) or through the breakdown of larger plastic items (secondary microplastics). The smallest microplastics, called nanoplastics (less than 1μm), can be particularly problematic as they can penetrate cells and tissues.
+              Microplastics are tiny plastic particles less than 5mm in diameter. They originate from larger plastic breakdown or direct manufacturing, often invisible to the naked eye. These particles can penetrate cells and tissues, posing potential environmental and health risks.
             </p>
             
             <div className="relative rounded-xl overflow-hidden shadow-soft plastic-accent h-56">
@@ -36,10 +35,7 @@ const AboutMicroplastics = () => {
             </div>
             
             <p className="text-gray-600">
-              As plastics break down into microplastics, their surface area increases dramatically, enhancing their ability to absorb and concentrate environmental toxins up to a million times their levels in surrounding water. A 1cm³ plastic fragment that degrades into 1μm³ particles increases its surface area by a factor of 10,000, creating vastly more area for chemical interactions. This surface chemistry is crucial to understanding their environmental impact, as it allows them to act as vectors for pollutants including persistent organic pollutants (POPs), heavy metals, and pathogens.
-            </p>
-            <p className="text-gray-600">
-              Microplastics have been documented in every environment studied—from the deepest ocean trenches to mountaintops, from Arctic ice to remote wilderness. Scientists estimate that 14 million tons of microplastics currently reside on the ocean floor alone. These particles have been found in drinking water (global average of 94 particles/L in tap water), air (0.4-60 particles/m³), soil (up to 300,000 particles/kg), and food (0-100 particles/g in seafood). The abundance and persistence of these particles have led some researchers to propose using them as geological markers for the Anthropocene epoch.
+              As plastics degrade, their surface area increases dramatically, enhancing their ability to absorb environmental toxins. They've been found in every environment studied, from ocean depths to mountaintops, drinking water to food.
             </p>
           </div>
 
@@ -92,7 +88,6 @@ const AboutMicroplastics = () => {
               </ul>
             </div>
             
-            {/* Decorative microplastic particles */}
             <div className="absolute w-10 h-10 rounded-sm bg-blue-100/50 -bottom-5 -right-5 transform rotate-12"></div>
             <div className="absolute w-6 h-6 rounded-full bg-teal-100/50 -top-3 right-20 transform rotate-45"></div>
           </div>
@@ -173,7 +168,6 @@ const AboutMicroplastics = () => {
             </div>
           </div>
           
-          {/* Decorative floating microplastics */}
           <div className="absolute w-8 h-2 rounded-sm bg-blue-100/40 top-4 right-8 transform rotate-12 floating-plastic"></div>
           <div className="absolute w-4 h-4 rounded-full bg-teal-100/40 bottom-8 left-8 transform -rotate-6 floating-plastic animation-delay-300"></div>
         </div>
