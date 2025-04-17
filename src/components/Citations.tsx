@@ -128,7 +128,8 @@ const Citations = () => {
             This website draws information from peer-reviewed academic research, books, and government sources.
           </p>
         </div>
-
+        <div className="space-y-12 opacity-0 animate-slide-up">
+          
         
 
           <div>
