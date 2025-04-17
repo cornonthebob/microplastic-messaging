@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Beaker, FlaskConical, Waves, Wind, User, Microscope, Sun, Droplets, Mountain, Repeat, ArrowDownToLine, Zap } from 'lucide-react';
@@ -80,27 +79,21 @@ const InteractiveGraphic = () => {
   return (
     <div id="interactive" className="bg-gray-50">
       <div className="section-container">
-        <div className="text-center mb-16 opacity-0 animate-fade-in">
+        <div className="text-center mb-8 opacity-0 animate-fade-in">
           <span className="inline-flex items-center rounded-full px-4 py-1 text-xs font-medium bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">
             Interactive Visualization
           </span>
           <h2 className="text-3xl md:text-4xl font-bold">PET Plastic Journey</h2>
-          <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 mb-8 rounded-full"></div>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Follow the journey of PET plastic from production to its presence in the human body as microplastics.
-            This visualization tracks the lifecycle of the most common plastic polymer used in beverage bottles, exploring the chemical,
-            environmental, and biological processes that transform useful materials into persistent pollutants.
-            Click on each stage to learn detailed information about the chemical processes and environmental impact.
+          <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 mb-4 rounded-full"></div>
+          <p className="text-gray-600 max-w-3xl mx-auto text-sm">
+            Explore the lifecycle of PET plastic - from production to its impact on human health, revealing the transformation of everyday materials into persistent environmental pollutants.
           </p>
         </div>
 
-        {/* Enhanced interactive timeline with better styling */}
         <div className="mb-12 opacity-0 animate-slide-up">
           <div className="relative bg-white p-4 rounded-xl shadow-md">
-            {/* Timeline line */}
             <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-1 md:w-full h-full md:h-1 bg-blue-200 top-0 md:top-12 z-0"></div>
             
-            {/* Timeline points */}
             <div className="grid md:grid-cols-6 gap-8 relative z-10">
               {petStages.map((stage) => (
                 <div 
@@ -145,7 +138,6 @@ const InteractiveGraphic = () => {
           </div>
         </div>
 
-        {/* Content display with enhanced visuals */}
         <div 
           className={cn(
             "bg-white rounded-2xl shadow-soft p-6 md:p-8 transition-opacity duration-300 opacity-0 animate-slide-up animation-delay-300",
@@ -180,13 +172,11 @@ const InteractiveGraphic = () => {
             </div>
           </div>
 
-          {/* Enhanced visual representations for each stage */}
           <div className="mt-8 flex justify-center items-center min-h-60">
             {activeStage.id === 1 && (
               <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
                 <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 h-1 bg-blue-200"></div>
                 
-                {/* Production process visualization */}
                 <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-300 rounded-lg flex items-center justify-center shadow-md">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 22V8L12 2L21 8V22H3Z" stroke="#E67E22" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -216,7 +206,6 @@ const InteractiveGraphic = () => {
                   <div className="absolute -bottom-6 text-xs font-medium text-gray-600">Consumption</div>
                 </div>
                 
-                {/* Flow arrows */}
                 <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M30 50 L120 50" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
                   <path d="M130 50 L220 50" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
@@ -226,74 +215,34 @@ const InteractiveGraphic = () => {
             )}
 
             {activeStage.id === 2 && (
-              <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
+              <div className="relative h-48 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
                 <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-blue-100 rounded-lg overflow-hidden flex flex-col">
-                  {/* Improved environmental degradation illustration */}
-                  <div className="flex-1 relative">
-                    {/* Sky with sun */}
-                    <div className="absolute top-4 right-6 flex flex-col items-center">
-                      <div className="w-12 h-12 rounded-full bg-yellow-300 shadow-lg relative flex items-center justify-center">
+                  <div className="flex-1 relative p-4">
+                    <div className="flex justify-between">
+                      <div className="flex flex-col items-center">
                         <Sun className="w-8 h-8 text-yellow-600" />
+                        <span className="text-xs mt-1">UV</span>
                       </div>
-                      <span className="text-xs font-medium mt-1">UV Radiation</span>
-                      <div className="absolute -bottom-16 w-24 h-8">
-                        <svg viewBox="0 0 100 40" className="w-full h-full">
-                          <path d="M 10,30 Q 50,0 90,30" stroke="#FBBF24" strokeWidth="2" strokeDasharray="4" fill="none" />
-                          <path d="M 20,35 Q 50,10 80,35" stroke="#FBBF24" strokeWidth="2" strokeDasharray="4" fill="none" />
-                          <path d="M 30,38 Q 50,20 70,38" stroke="#FBBF24" strokeWidth="2" strokeDasharray="4" fill="none" />
-                        </svg>
-                      </div>
-                    </div>
-                    
-                    {/* Wind effect */}
-                    <div className="absolute top-4 left-6 flex flex-col items-center">
-                      <div className="w-12 h-12 bg-blue-50 shadow rounded-full flex items-center justify-center">
+                      <div className="flex flex-col items-center">
                         <Wind className="w-8 h-8 text-blue-400" />
+                        <span className="text-xs mt-1">Wind</span>
                       </div>
-                      <span className="text-xs font-medium mt-1">Wind & Abrasion</span>
-                      <div className="absolute -bottom-12 w-32 h-8">
-                        <svg viewBox="0 0 120 30" className="w-full h-full">
-                          <path d="M 10,15 Q 20,10 30,15 Q 40,20 50,15 Q 60,10 70,15 Q 80,20 90,15 Q 100,10 110,15" stroke="#93C5FD" strokeWidth="2" fill="none" />
-                        </svg>
-                      </div>
-                    </div>
-                    
-                    {/* Water/moisture */}
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-                      <div className="w-12 h-12 bg-blue-100 shadow rounded-full flex items-center justify-center">
+                      <div className="flex flex-col items-center">
                         <Droplets className="w-8 h-8 text-blue-500" />
-                      </div>
-                      <span className="text-xs font-medium mt-1">Hydrolysis</span>
-                    </div>
-                  </div>
-                  
-                  {/* Bottle with degradation visualization */}
-                  <div className="mx-auto my-2 relative">
-                    <div className="relative w-16 h-32 mx-auto bg-blue-200/30 rounded-t-lg flex flex-col items-center justify-center border border-blue-300/50">
-                      {/* Bottle neck */}
-                      <div className="absolute -top-6 w-6 h-6 bg-blue-200/30 rounded-t-md border border-blue-300/50"></div>
-                      
-                      {/* Degradation effects */}
-                      <div className="absolute top-1/4 left-0 w-4 h-1 bg-yellow-100 rounded-full transform -rotate-30"></div>
-                      <div className="absolute top-1/3 right-0 w-3 h-2 bg-gray-300/50 rounded-full transform rotate-15"></div>
-                      <div className="absolute top-1/2 left-1/4 w-8 h-0.5 bg-gray-400/30 rounded-full transform"></div>
-                      <div className="absolute bottom-1/4 right-1/4 w-5 h-0.5 bg-yellow-100 rounded-full transform rotate-45"></div>
-                      
-                      {/* Breaking points animation */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <svg viewBox="0 0 50 100" className="w-full h-full opacity-70">
-                          <path d="M 10,20 L 40,20" stroke="#CBD5E1" strokeWidth="0.5" strokeDasharray="2" />
-                          <path d="M 20,40 L 30,40" stroke="#CBD5E1" strokeWidth="0.5" strokeDasharray="2" />
-                          <path d="M 15,60 L 35,60" stroke="#CBD5E1" strokeWidth="0.5" strokeDasharray="2" />
-                          <path d="M 10,80 L 40,80" stroke="#CBD5E1" strokeWidth="0.5" strokeDasharray="2" />
-                        </svg>
+                        <span className="text-xs mt-1">Moisture</span>
                       </div>
                     </div>
                     
-                    {/* Process labels */}
+                    <div className="flex justify-center mt-4">
+                      <div className="relative w-24 h-16 bg-blue-200/30 rounded-lg border border-blue-300/50">
+                        <div className="absolute top-1/4 left-0 w-4 h-1 bg-yellow-100 rounded-full transform -rotate-30"></div>
+                        <div className="absolute bottom-1/4 right-0 w-5 h-0.5 bg-yellow-100 rounded-full transform rotate-45"></div>
+                      </div>
+                    </div>
+                    
                     <div className="text-center mt-2">
-                      <div className="text-xs font-medium text-gray-700">Physical & Chemical Degradation</div>
-                      <div className="text-xs text-gray-500 mt-1">450+ years to fully degrade</div>
+                      <div className="text-xs text-gray-700">Slow Degradation</div>
+                      <div className="text-xs text-gray-500">450+ years</div>
                     </div>
                   </div>
                 </div>
@@ -303,7 +252,6 @@ const InteractiveGraphic = () => {
             {activeStage.id === 3 && (
               <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-blue-50 rounded-lg overflow-hidden">
-                  {/* Staged fragmentation of a plastic bottle */}
                   <div className="absolute top-6 left-6">
                     <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M20 0 V10 H40 V0 M20 10 C20 10 10 20 10 30 C10 40 15 60 20 70 C25 80 30 80 30 80 C30 80 35 80 40 70 C45 60 50 40 50 30 C50 20 40 10 40 10 Z" 
@@ -350,7 +298,6 @@ const InteractiveGraphic = () => {
                     <div className="absolute -bottom-6 text-xs font-medium text-center w-full">Nanoplastics</div>
                   </div>
                   
-                  {/* Flow arrows */}
                   <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M100 40 L200 40" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
                     <path d="M300 40 L350 80" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
@@ -362,103 +309,37 @@ const InteractiveGraphic = () => {
             )}
             
             {activeStage.id === 4 && (
-              <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
+              <div className="relative h-48 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
                 <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-blue-300 rounded-lg overflow-hidden">
-                  {/* Main section labels */}
-                  <div className="absolute top-2 left-0 right-0 flex justify-around">
-                    <div className="bg-white/80 rounded px-2 py-1 text-xs font-semibold">Atmosphere</div>
-                    <div className="bg-white/80 rounded px-2 py-1 text-xs font-semibold">Land</div>
-                    <div className="bg-white/80 rounded px-2 py-1 text-xs font-semibold">Ocean</div>
-                  </div>
-                  
-                  {/* Atmosphere section */}
-                  <div className="absolute top-8 left-4 w-1/4">
-                    <div className="flex items-center justify-center mb-2">
-                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <Wind className="w-5 h-5 text-blue-600" />
-                      </div>
+                  <div className="flex justify-around p-4">
+                    <div className="flex flex-col items-center">
+                      <Wind className="w-8 h-8 text-blue-600" />
+                      <span className="text-xs mt-1">Atmosphere</span>
                     </div>
-                    <div className="flex justify-center">
-                      {/* Air particles */}
-                      <div className="relative h-20 w-20">
-                        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white/60 rounded-full"></div>
-                        <div className="absolute top-3/4 left-1/2 w-1 h-1 bg-white/60 rounded-full"></div>
-                        <div className="absolute top-1/2 left-3/4 w-1 h-1 bg-white/60 rounded-full"></div>
-                        <div className="absolute top-1/4 right-1/4 w-1.5 h-1.5 bg-blue-200/70 rounded-full"></div>
-                        <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-blue-200/70 rounded-full"></div>
-                      </div>
+                    <div className="flex flex-col items-center">
+                      <Mountain className="w-8 h-8 text-green-600" />
+                      <span className="text-xs mt-1">Land</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <Waves className="w-8 h-8 text-blue-600" />
+                      <span className="text-xs mt-1">Ocean</span>
                     </div>
                   </div>
                   
-                  {/* Land section */}
-                  <div className="absolute top-8 left-1/3 right-1/3">
-                    <div className="flex items-center justify-center mb-2">
-                      <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                        <Mountain className="w-5 h-5 text-green-600" />
-                      </div>
-                    </div>
-                    <div className="flex justify-center">
-                      {/* Land with river */}
-                      <div className="relative h-20 w-24 bg-green-200/30 rounded-lg">
-                        <div className="absolute top-1/4 left-1/4 right-1/4 bottom-1/2 bg-blue-300/50 rounded transform rotate-45"></div>
-                        <div className="absolute w-2 h-2 top-1/4 left-1/3 bg-blue-200/60 rounded-sm"></div>
-                        <div className="absolute w-1.5 h-1.5 bottom-1/3 right-1/4 bg-blue-200/60 rounded-sm"></div>
-                      </div>
-                    </div>
+                  <div className="flex justify-center mt-4">
+                    <Repeat className="w-12 h-12 text-blue-700/50" />
                   </div>
                   
-                  {/* Ocean section */}
-                  <div className="absolute top-8 right-4 w-1/4">
-                    <div className="flex items-center justify-center mb-2">
-                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <Waves className="w-5 h-5 text-blue-600" />
-                      </div>
-                    </div>
-                    <div className="flex justify-center">
-                      {/* Ocean with currents */}
-                      <div className="relative h-20 w-20 bg-blue-400/30 rounded-lg">
-                        <svg className="absolute inset-0" viewBox="0 0 100 100">
-                          <path d="M 20,30 Q 50,20 80,30" stroke="white" strokeWidth="1" fill="none" strokeDasharray="2" />
-                          <path d="M 20,50 Q 50,40 80,50" stroke="white" strokeWidth="1" fill="none" strokeDasharray="2" />
-                          <path d="M 20,70 Q 50,60 80,70" stroke="white" strokeWidth="1" fill="none" strokeDasharray="2" />
-                        </svg>
-                        <div className="absolute w-2 h-2 top-1/4 left-1/4 bg-blue-200/60 rounded-sm"></div>
-                        <div className="absolute w-1.5 h-1.5 bottom-1/4 right-1/3 bg-blue-200/60 rounded-sm"></div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Transport arrows */}
-                  <div className="absolute bottom-16 left-0 right-0 flex justify-center">
-                    <div className="relative w-full flex justify-center">
-                      <Repeat className="w-12 h-12 text-blue-700/50" />
-                      <div className="absolute -bottom-8 text-xs font-semibold bg-white/90 px-2 py-1 rounded">
-                        Global Transport Cycle
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Ocean floor with sediments */}
-                  <div className="absolute bottom-0 inset-x-0 h-12 flex items-end">
-                    <div className="w-full h-8 bg-gray-300/30 flex justify-around items-start relative">
-                      <ArrowDownToLine className="w-6 h-6 text-gray-700/50 absolute left-1/4 -top-8" />
-                      <ArrowDownToLine className="w-6 h-6 text-gray-700/50 absolute right-1/4 -top-8" />
-                      <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-xs font-medium px-2 py-0.5 bg-gray-100 rounded">
-                        Deep Ocean Sediments
-                      </div>
-                      <div className="w-2 h-2 bg-blue-200/60 rounded-sm mt-1"></div>
-                      <div className="w-3 h-1 bg-blue-200/60 rounded-sm mt-2"></div>
-                      <div className="w-2 h-1 bg-blue-200/60 rounded-sm mt-3"></div>
-                    </div>
+                  <div className="text-center mt-2">
+                    <div className="text-xs font-semibold text-gray-800">Global Transport Cycle</div>
                   </div>
                 </div>
               </div>
             )}
             
             {activeStage.id === 5 && (
-              <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
+              <div className="relative h-48 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
                 <div className="absolute inset-0 bg-white rounded-lg overflow-hidden border border-gray-100">
-                  {/* Human silhouette */}
                   <div className="absolute inset-x-0 top-4 flex justify-center">
                     <div className="relative">
                       <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -470,7 +351,6 @@ const InteractiveGraphic = () => {
                         <path d="M70 110 L90 140" stroke="#E2E8F0" strokeWidth="10" strokeLinecap="round"/>
                       </svg>
                       
-                      {/* Microplastic exposure points */}
                       <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-20 h-20">
                         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                           <div className="w-4 h-4 bg-blue-100 rounded-full flex items-center justify-center">
@@ -502,7 +382,6 @@ const InteractiveGraphic = () => {
                     </div>
                   </div>
                   
-                  {/* Exposure source examples */}
                   <div className="absolute bottom-4 left-4 flex flex-col gap-2">
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
@@ -518,7 +397,6 @@ const InteractiveGraphic = () => {
                     </div>
                   </div>
                   
-                  {/* Exposure statistics */}
                   <div className="absolute bottom-4 right-4 bg-gray-50 rounded-lg p-2 border border-gray-100 max-w-[150px]">
                     <p className="text-xs text-gray-900 font-semibold mb-1">Weekly Human Intake:</p>
                     <p className="text-xs text-gray-600">~5g of plastic</p>
@@ -529,83 +407,31 @@ const InteractiveGraphic = () => {
             )}
             
             {activeStage.id === 6 && (
-              <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
+              <div className="relative h-48 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
                 <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-purple-50 rounded-lg overflow-hidden">
-                  {/* Cell membrane */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border-2 border-purple-200"></div>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full border-2 border-purple-200 opacity-50"></div>
                   
-                  {/* Cell nucleus */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-purple-100 border border-purple-200 flex items-center justify-center">
-                    <div className="text-xs font-medium text-purple-800">Nucleus</div>
-                  </div>
-                  
-                  {/* Cell organelles with labels */}
-                  <div className="absolute top-1/3 left-1/3 w-10 h-6 rounded-full bg-green-100 border border-green-200 flex items-center justify-center">
-                    <div className="text-[8px] font-medium text-green-800">Mitochondria</div>
-                  </div>
-                  <div className="absolute bottom-1/3 right-1/3 w-12 h-7 rounded-full bg-amber-100 border border-amber-200 flex items-center justify-center">
-                    <div className="text-[8px] font-medium text-amber-800">Lysosome</div>
-                  </div>
-                  <div className="absolute top-2/3 right-1/4 w-8 h-5 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center">
-                    <div className="text-[8px] font-medium text-blue-800">Vesicle</div>
-                  </div>
-                  
-                  {/* Title at the top */}
-                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2 text-sm font-semibold text-gray-800 bg-white/80 px-3 py-1 rounded-full">
-                    Cellular Interactions
-                  </div>
-                  
-                  {/* Microplastic interactions */}
-                  <div className="absolute top-1/3 left-1/4">
-                    <div className="w-4 h-4 bg-blue-400/60 rounded-sm transform rotate-12 relative">
-                      <svg className="absolute -right-8 -top-8" width="30" height="30" viewBox="0 0 30 30">
-                        <path d="M 5,25 Q 15,5 25,25" stroke="#3B82F6" strokeWidth="1" fill="none" />
-                        <text x="12" y="5" fontSize="6" fill="#3B82F6" fontWeight="bold">Endocytosis</text>
-                      </svg>
+                  <div className="flex justify-center items-center h-full">
+                    <div className="flex space-x-4">
+                      <div className="flex flex-col items-center">
+                        <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
+                          <Zap className="w-5 h-5 text-yellow-600" />
+                        </div>
+                        <span className="text-xs mt-1">ROS</span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                          <div className="w-6 h-6 rounded-full bg-red-200/50 animate-pulse"></div>
+                        </div>
+                        <span className="text-xs mt-1">Inflammation</span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                          <Microscope className="w-5 h-5 text-blue-600" />
+                        </div>
+                        <span className="text-xs mt-1">Interaction</span>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="absolute bottom-1/3 right-1/4">
-                    <div className="w-3 h-3 bg-blue-400/60 rounded-full relative">
-                      <svg className="absolute -left-8 -top-8" width="30" height="30" viewBox="0 0 30 30">
-                        <path d="M 5,5 Q 15,25 25,5" stroke="#3B82F6" strokeWidth="1" fill="none" />
-                        <text x="8" y="28" fontSize="6" fill="#3B82F6" fontWeight="bold">Membrane Damage</text>
-                      </svg>
-                    </div>
-                  </div>
-                  
-                  {/* Nanoplastic in nucleus */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-2 h-2 bg-red-400/70 rounded-full"></div>
-                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-[8px] font-medium bg-red-50/90 px-1 py-0.5 rounded text-red-600 whitespace-nowrap">
-                      Nanoplastic (&lt;1μm)
-                    </div>
-                  </div>
-                  
-                  {/* ROS (Reactive Oxygen Species) generation */}
-                  <div className="absolute bottom-1/4 left-1/4 flex flex-col items-center">
-                    <div className="w-8 h-8 relative">
-                      <div className="absolute inset-0 w-6 h-6 bg-yellow-100 rounded-full opacity-30 animate-ping"></div>
-                      <Zap className="w-5 h-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-yellow-600" />
-                    </div>
-                    <div className="text-[8px] font-medium bg-yellow-50 px-1 py-0.5 rounded text-yellow-700 mt-1">
-                      ROS Generation
-                    </div>
-                  </div>
-                  
-                  {/* Inflammation indicator */}
-                  <div className="absolute bottom-8 right-1/4 flex flex-col items-center">
-                    <div className="w-8 h-8 rounded-full bg-red-100/50 flex items-center justify-center">
-                      <div className="w-6 h-6 rounded-full bg-red-200/50 animate-pulse"></div>
-                    </div>
-                    <div className="text-[8px] font-medium bg-red-50 px-1 py-0.5 rounded text-red-700 mt-1">
-                      Inflammation
-                    </div>
-                  </div>
-                  
-                  {/* Key microplastic impacts */}
-                  <div className="absolute bottom-2 left-2 right-2 bg-white/80 rounded p-1 text-[9px] text-center text-gray-700">
-                    <strong>Key Effects:</strong> Oxidative Stress, DNA Damage, Cell Death, Immune System Activation
                   </div>
                 </div>
               </div>
