@@ -25,7 +25,7 @@ const AboutMicroplastics = () => {
             
             <div className="relative rounded-xl overflow-hidden shadow-soft plastic-accent h-56">
               <img 
-                src="/images/microplastics-water.jpg" 
+                src="C:\Users\gupta\Downloads\Nanoplastics_Article_Blog_d9ebfb92-ad9f-4d4d-9f85-ad4e302e8d5f.jpg" 
                 alt="Microplastics in water sample" 
                 className="w-full h-full object-cover"
               />
