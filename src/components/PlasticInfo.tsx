@@ -1,3 +1,4 @@
+
 import React from 'react';
 import AboutMicroplastics from './microplastics/AboutMicroplastics';
 import PlasticTypesDetail from './microplastics/PlasticTypesDetail';
@@ -16,7 +17,7 @@ const PlasticInfo = () => {
               Microplastic Crisis
             </h1>
             <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
-              Microscopic plastic particles are invading our planet and bodies. Explore the science behind this environmental challenge.
+              Tiny plastic bits are everywhere - in our oceans, food, and even our bodies. Learn what this means for our planet.
             </p>
           </div>
           

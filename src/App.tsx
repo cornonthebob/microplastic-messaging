@@ -9,6 +9,7 @@ import AboutPage from "./pages/AboutPage";
 import PlasticTypesPage from "./pages/PlasticTypesPage";
 import HealthImpactPage from "./pages/HealthImpactPage";
 import InteractivePage from "./pages/InteractivePage";
+import PlasticLifecycle from "./pages/PlasticLifecycle";
 import SolutionsPage from "./pages/SolutionsPage";
 import CitationsPage from "./pages/CitationsPage";
 import NotFound from "./pages/NotFound";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/types" element={<PlasticTypesPage />} />
           <Route path="/health" element={<HealthImpactPage />} />
           <Route path="/interactive" element={<InteractivePage />} />
+          <Route path="/lifecycle" element={<PlasticLifecycle />} />
           <Route path="/solutions" element={<SolutionsPage />} />
           <Route path="/citations" element={<CitationsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

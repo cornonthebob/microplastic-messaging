@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Droplets, Microscope, FlaskConical } from 'lucide-react';
 
@@ -15,11 +16,11 @@ const AboutMicroplastics = () => {
           <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 mb-8 rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-10 items-start">
           <div className="space-y-6 opacity-0 animate-slide-up animation-delay-200">
             <h3 className="text-2xl font-semibold">What Are Microplastics?</h3>
             <p className="text-gray-600">
-              Microplastics are tiny plastic particles less than 5mm in diameter. They originate from larger plastic breakdown or direct manufacturing, often invisible to the naked eye. These particles can penetrate cells and tissues, posing potential environmental and health risks.
+              Microplastics are tiny plastic bits smaller than 5mm. They come from bigger plastics breaking down or from products like face scrubs. They're so small that they can get into our bodies through food, water, and air.
             </p>
             
             <div className="relative rounded-xl overflow-hidden shadow-soft plastic-accent h-56">
@@ -30,12 +31,12 @@ const AboutMicroplastics = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4 right-4 text-white">
-                <span className="text-sm font-medium">Microscopic view of microplastics in water sample</span>
+                <span className="text-sm font-medium">Microplastics in water sample under microscope</span>
               </div>
             </div>
             
             <p className="text-gray-600">
-              As plastics degrade, their surface area increases dramatically, enhancing their ability to absorb environmental toxins. They've been found in every environment studied, from ocean depths to mountaintops, drinking water to food.
+              As plastics break down, they can soak up harmful chemicals. They've been found everywhere - oceans, mountains, drinking water, and even in the food we eat.
             </p>
           </div>
 
@@ -52,7 +53,7 @@ const AboutMicroplastics = () => {
                 <li className="flex gap-3">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-800 font-bold">1</div>
                   <div>
-                    <span className="font-medium">Physical Breakdown</span>: Larger plastics fragment due to UV radiation (photodegradation), mechanical abrasion, and weathering. This process accelerates in marine environments where wave action and sand particles create a "plastic sand" effect. Freeze-thaw cycles and thermal stress further contribute to fragmentation by creating microcracks that propagate through the material.
+                    <span className="font-medium">Physical Breakdown</span>: Bigger plastics break apart from sunlight, waves, and weather. Sun makes plastic brittle, and waves break it into smaller pieces.
                   </div>
                 </li>
                 
@@ -63,26 +64,26 @@ const AboutMicroplastics = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2">
-                    <span className="text-xs text-white">Degradation of plastic in marine environment</span>
+                    <span className="text-xs text-white">Plastic breaking down in ocean</span>
                   </div>
                 </div>
                 
                 <li className="flex gap-3">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-800 font-bold">2</div>
                   <div>
-                    <span className="font-medium">Chemical Degradation</span>: Oxidation and hydrolysis weaken polymer chains, causing structural breakdown. Oxidative degradation introduces carbonyl groups (-C=O) into the polymer backbone, making it more brittle. Hydrolysis attacks ester linkages in polymers like polyethylene terephthalate (PET) and polyurethane, cleaving the polymer chain. These processes are catalyzed by environmental factors including pH extremes, elevated temperatures, and the presence of certain metal ions.
+                    <span className="font-medium">Chemical Breakdown</span>: Oxygen and water break down plastic over time, making it weak and crumbly. This happens faster in hot weather or acidic conditions.
                   </div>
                 </li>
                 <li className="flex gap-3">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-800 font-bold">3</div>
                   <div>
-                    <span className="font-medium">Direct Manufacturing</span>: Some microplastics (microbeads) are purposely manufactured for products like exfoliants and cosmetics. These primary microplastics are typically 10μm to 1mm in size and made from polyethylene, polypropylene, or polystyrene. Though banned in rinse-off cosmetics in many countries since 2015-2018, they remain legal in leave-on products and industrial applications. An estimated 15-51 trillion microbeads enter aquatic environments annually from cosmetic sources alone.
+                    <span className="font-medium">Made On Purpose</span>: Some tiny plastic beads are made for products like face scrubs and toothpaste. Many countries now ban these in wash-off products.
                   </div>
                 </li>
                 <li className="flex gap-3">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-800 font-bold">4</div>
                   <div>
-                    <span className="font-medium">Synthetic Fibers</span>: Washing synthetic textiles releases microfibers into wastewater systems. A single wash of polyester garments can release 700,000 to 6 million microfibers. These fibers (typically 100μm-5mm in length and 10-20μm in diameter) are particularly concerning as their high surface-to-volume ratio enhances contaminant adsorption. Studies have found synthetic fibers in 83% of tap water samples globally and in the digestive tracts of numerous marine organisms.
+                    <span className="font-medium">Clothing Fibers</span>: Washing synthetic clothes releases tiny plastic fibers. One wash can release thousands of these microfibers into water systems.
                   </div>
                 </li>
               </ul>
@@ -97,7 +98,7 @@ const AboutMicroplastics = () => {
           <div className="relative flex items-center justify-center mb-6">
             <FlaskConical className="h-8 w-8 text-blue-600 mr-3" />
             <h3 className="text-2xl font-semibold">Pathways Into Human Body</h3>
-            <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent"></div>
+            {/* Removed the blue line that was here */}
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -114,12 +115,12 @@ const AboutMicroplastics = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <span className="text-white text-xs p-2">Seafood with microplastic contamination</span>
+                  <span className="text-white text-xs p-2">Seafood with microplastics</span>
                 </div>
               </div>
-              <h4 className="font-semibold mb-2">Ingestion</h4>
+              <h4 className="font-semibold mb-2">Eating</h4>
               <p className="text-gray-600 text-sm">
-                Through contaminated food (especially seafood), drinking water, and food packaging. Seafood is a major source, with shellfish containing 0.2-4 particles/g and fish 1-7 particles/individual. Drinking water contains 0-61 particles/L (tap) and 2-241 particles/L (bottled). Food packaging contributes through migration, with studies showing 100-700 particles/kg in packaged foods.
+                We eat microplastics in food (especially seafood), drinking water, and from food packaging. Shellfish and bottled water contain the most plastic particles.
               </p>
             </div>
             
@@ -139,9 +140,9 @@ const AboutMicroplastics = () => {
                   <span className="text-white text-xs p-2">Microplastic fibers in air</span>
                 </div>
               </div>
-              <h4 className="font-semibold mb-2">Inhalation</h4>
+              <h4 className="font-semibold mb-2">Breathing</h4>
               <p className="text-gray-600 text-sm">
-                Breathing in airborne microplastic particles and fibers suspended in air. Indoor air typically contains higher concentrations (1.7-16.2 particles/m³) than outdoor air (0.3-1.5 particles/m³), with synthetic textiles being a major source. Measurements in household dust show 1,000-60,000 microplastic particles per gram, dominated by PET and nylon fibers.
+                We breathe in microplastics floating in air. Indoor air has more plastic particles than outdoor air. House dust contains thousands of microplastic bits.
               </p>
             </div>
             
@@ -158,12 +159,12 @@ const AboutMicroplastics = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <span className="text-white text-xs p-2">Cosmetics with microplastic particles</span>
+                  <span className="text-white text-xs p-2">Cosmetics with microplastics</span>
                 </div>
               </div>
-              <h4 className="font-semibold mb-2">Dermal Contact</h4>
+              <h4 className="font-semibold mb-2">Skin Contact</h4>
               <p className="text-gray-600 text-sm">
-                Absorption through skin from cosmetics, cleaning products, and synthetic clothing. The skin presents a significant barrier, but nanoparticles below 100nm may penetrate, particularly through hair follicles or damaged skin. Cosmetics are a significant source, with leave-on products (lotions, makeup) containing up to 24% microplastic content by weight.
+                Microplastics touch our skin through cosmetics, cleaning products, and synthetic clothes. Most can't pass through skin, but the smallest ones might.
               </p>
             </div>
           </div>

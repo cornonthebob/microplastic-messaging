@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { ArrowDown, Droplets, Fish, Waves } from 'lucide-react';
+import { Droplets, Fish, Waves } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
 
@@ -38,7 +39,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8 opacity-0 animate-fade-in animation-delay-200">
-            Tiny plastic particles are infiltrating our environment and bodies. Discover their impact and solutions.
+            Tiny plastic bits are in our water, food, and air. Learn about their impact and what we can do.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in animation-delay-400">
@@ -118,14 +119,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator with Link to About page */}
-      <div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer opacity-0 animate-fade-in animation-delay-800"
-      >
-        <Link to="/about">
-          <ArrowDown className="h-6 w-6 text-gray-500" />
-        </Link>
-      </div>
+      {/* Removed the arrow scroll indicator that was here */}
 
       {/* Floating particles for visual effect */}
       <div className={cn(
