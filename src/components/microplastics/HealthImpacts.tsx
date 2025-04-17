@@ -14,7 +14,7 @@ const HealthImpacts = () => {
           <span className="inline-flex items-center rounded-full px-4 py-1 text-xs font-medium bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">
             Health Implications
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold">Impact on Human Health</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Impact on Earth</h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 mb-8 rounded-full"></div>
         </div>
 
