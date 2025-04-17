@@ -113,7 +113,7 @@ const citations: Citation[] = [
 const Citations = () => {
   const academicPapers = citations.filter(citation => citation.type === 'academic');
   const books = citations.filter(citation => citation.type === 'book');
-  const websites = citations.filter(citation => citation.type === 'web');
+  const websites = citations.filter(citation => citation.type === 'references');
 
   return (
     <section className="bg-gray-50">
