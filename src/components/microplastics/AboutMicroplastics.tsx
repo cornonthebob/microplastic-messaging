@@ -20,23 +20,23 @@ const AboutMicroplastics = () => {
           <div className="space-y-6 opacity-0 animate-slide-up animation-delay-200">
             <h3 className="text-2xl font-semibold">What Are Microplastics?</h3>
             <p className="text-gray-600">
-              Microplastics are tiny plastic bits smaller than 5mm. They come from bigger plastics breaking down or from products like face scrubs. They're small enough to enter our bodies through food, water, and air.
+              Microplastics are tiny plastic bits smaller than 5mm. They come from bigger plastics breaking down or from products like face scrubs. They're so small that they can get into our bodies through food, water, and air.
             </p>
             
             <div className="relative rounded-xl overflow-hidden shadow-soft plastic-accent h-56">
               <img 
-                src="/lovable-uploads/b4433057-41db-4b84-b3bd-7c0a055258a9.png" 
+                src="/images/microplastics-water.jpg" 
                 alt="Microplastics in water sample" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4 right-4 text-white">
-                <span className="text-sm font-medium">Microplastics in water sample</span>
+                <span className="text-sm font-medium">Microplastics in water sample under microscope</span>
               </div>
             </div>
             
             <p className="text-gray-600">
-              As plastics break down, they soak up harmful chemicals. They've been found everywhere - oceans, mountains, drinking water, and even in the food we eat.
+              As plastics break down, they can soak up harmful chemicals. They've been found everywhere - oceans, mountains, drinking water, and even in the food we eat.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ const AboutMicroplastics = () => {
                 
                 <div className="relative h-40 rounded-lg overflow-hidden my-3 ml-11">
                   <img 
-                    src="/lovable-uploads/6ccdb053-aa89-486a-94db-455bebae5d55.png" 
+                    src="/images/plastic-degradation.jpg" 
                     alt="Plastic degradation process" 
                     className="w-full h-full object-cover"
                   />
@@ -98,6 +98,7 @@ const AboutMicroplastics = () => {
           <div className="relative flex items-center justify-center mb-6">
             <FlaskConical className="h-8 w-8 text-blue-600 mr-3" />
             <h3 className="text-2xl font-semibold">Pathways Into Human Body</h3>
+            {/* Removed the blue line that was here */}
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -109,7 +110,7 @@ const AboutMicroplastics = () => {
               </div>
               <div className="relative h-32 w-full mb-4 rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/a106fa0a-dab3-4256-8736-fc2e3ad37af6.png" 
+                  src="/images/food-microplastics.jpg" 
                   alt="Food contaminated with microplastics" 
                   className="w-full h-full object-cover"
                 />
@@ -131,7 +132,7 @@ const AboutMicroplastics = () => {
               </div>
               <div className="relative h-32 w-full mb-4 rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/b5288b58-824f-45df-9c1b-e1f342269780.png" 
+                  src="/images/air-microplastics.jpg" 
                   alt="Airborne microplastics" 
                   className="w-full h-full object-cover"
                 />
@@ -153,12 +154,12 @@ const AboutMicroplastics = () => {
               </div>
               <div className="relative h-32 w-full mb-4 rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/39faa72b-69f2-44dd-882f-6bfa775d6fd3.png" 
+                  src="/images/skin-microplastics.jpg" 
                   alt="Dermal contact with microplastics" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <span className="text-white text-xs p-2">Clothing releasing microplastics</span>
+                  <span className="text-white text-xs p-2">Cosmetics with microplastics</span>
                 </div>
               </div>
               <h4 className="font-semibold mb-2">Skin Contact</h4>

@@ -6,9 +6,7 @@ import InteractiveGraphic from "@/components/InteractiveGraphic";
 const InteractivePage = () => {
   return (
     <PageLayout>
-      <div className="pb-16">
-        <InteractiveGraphic />
-      </div>
+      <InteractiveGraphic />
     </PageLayout>
   );
 };
