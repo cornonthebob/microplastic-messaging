@@ -6,7 +6,7 @@ interface Citation {
   year: string;
   title: string;
   source: string;
-  type: 'academic' | 'book' | 'web';
+  type: 'academic' | 'book' | 'references';
   url?: string;
 }
 
@@ -17,7 +17,7 @@ const citations: Citation[] = [
     year: '2017',
     title: 'Production, use, and fate of all plastics ever made',
     source: 'Science Advances, 3(7), e1700782',
-    type: 'academic',
+    type: 'references',
     url: 'https://doi.org/10.1126/sciadv.1700782'
   },
   {
@@ -26,7 +26,7 @@ const citations: Citation[] = [
     year: '2017',
     title: 'Plastic and human health: A micro issue?',
     source: 'Environmental Science & Technology, 51(12), 6634-6647',
-    type: 'academic',
+    type: 'references',
     url: 'https://doi.org/10.1021/acs.est.7b00423'
   },
   {
@@ -35,7 +35,7 @@ const citations: Citation[] = [
     year: '2019',
     title: 'Airborne microplastics: a review study on method for analysis, occurrence, movement and risks',
     source: 'Environmental Monitoring and Assessment, 191, 668',
-    type: 'academic',
+    type: 'references',
     url: 'https://doi.org/10.1007/s10661-019-7842-0'
   },
   {
@@ -44,7 +44,7 @@ const citations: Citation[] = [
     year: '2009',
     title: 'Plastics, the environment and human health: current consensus and future trends',
     source: 'Philosophical Transactions of the Royal Society B: Biological Sciences, 364(1526), 2153-2166',
-    type: 'academic',
+    type: 'references',
     url: 'https://doi.org/10.1098/rstb.2009.0053'
   },
   {
@@ -53,7 +53,7 @@ const citations: Citation[] = [
     year: '2014',
     title: "Plastic pollution in the world's oceans: More than 5 trillion plastic pieces weighing over 250,000 tons afloat at sea",
     source: 'PLoS ONE, 9(12), e111913',
-    type: 'academic',
+    type: 'references',
     url: 'https://doi.org/10.1371/journal.pone.0111913'
   },
   {
@@ -62,7 +62,7 @@ const citations: Citation[] = [
     year: '2021',
     title: 'Plasticenta: First evidence of microplastics in human placenta',
     source: 'Environment International, 146, 106274',
-    type: 'academic',
+    type: 'references',
     url: 'https://doi.org/10.1016/j.envint.2020.106274'
   },
   {
@@ -71,7 +71,7 @@ const citations: Citation[] = [
     year: '2011',
     title: 'Microplastics in the marine environment',
     source: 'Marine Pollution Bulletin, 62(8), 1596-1605',
-    type: 'academic',
+    type: 'references',
     url: 'https://doi.org/10.1016/j.marpolbul.2011.05.030'
   },
   {
@@ -80,7 +80,7 @@ const citations: Citation[] = [
     year: '2020',
     title: 'Green plastics: An introduction to the new science of biodegradable plastics',
     source: 'Princeton University Press',
-    type: 'book'
+    type: 'references'
   },
   {
     id: 'andrady2015',
@@ -88,7 +88,7 @@ const citations: Citation[] = [
     year: '2015',
     title: 'Plastics and environmental sustainability',
     source: 'Wiley',
-    type: 'book'
+    type: 'references'
   },
   {
     id: 'epa2023',
@@ -96,7 +96,7 @@ const citations: Citation[] = [
     year: '2023',
     title: 'Plastics',
     source: 'EPA.gov',
-    type: 'web',
+    type: 'references',
     url: 'https://www.epa.gov/plastics'
   },
   {
@@ -105,7 +105,7 @@ const citations: Citation[] = [
     year: '2023',
     title: 'What are microplastics?',
     source: 'oceanservice.noaa.gov',
-    type: 'web',
+    type: 'references',
     url: 'https://oceanservice.noaa.gov/facts/microplastics.html'
   }
 ];
@@ -125,7 +125,7 @@ const Citations = () => {
           <h2 className="text-3xl md:text-4xl font-bold">Citations</h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 mb-8 rounded-full"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            This website draws information from peer-reviewed academic research, scientific books, and authoritative government sources.
+            This website draws information from peer-reviewed academic research, books, and government sources.
           </p>
         </div>
 
@@ -180,7 +180,7 @@ const Citations = () => {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
-              Websites
+              References
             </h3>
             <div className="bg-white rounded-xl shadow-soft p-6">
               <div className="space-y-4">
