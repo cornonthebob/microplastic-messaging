@@ -78,7 +78,7 @@ const InteractiveGraphic = () => {
   };
 
   return (
-    <section id="interactive" className="bg-gray-50">
+    <div id="interactive" className="bg-gray-50">
       <div className="section-container">
         <div className="text-center mb-16 opacity-0 animate-fade-in">
           <span className="inline-flex items-center rounded-full px-4 py-1 text-xs font-medium bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">
@@ -87,8 +87,8 @@ const InteractiveGraphic = () => {
           <h2 className="text-3xl md:text-4xl font-bold">PET Plastic Journey</h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 mb-8 rounded-full"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Follow the comprehensive journey of PET (polyethylene terephthalate) from production to its presence in the human body as microplastics.
-            This visualization tracks the entire lifecycle of the most common plastic polymer used in beverage bottles, exploring the complex chemical,
+            Follow the journey of PET plastic from production to its presence in the human body as microplastics.
+            This visualization tracks the lifecycle of the most common plastic polymer used in beverage bottles, exploring the chemical,
             environmental, and biological processes that transform useful materials into persistent pollutants.
             Click on each stage to learn detailed information about the chemical processes and environmental impact.
           </p>
@@ -613,7 +613,7 @@ const InteractiveGraphic = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
