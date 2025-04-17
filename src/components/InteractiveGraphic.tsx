@@ -565,7 +565,7 @@ const InteractiveGraphic = () => {
                     </div>
                   </div>
                   
-                  <div className="absolute bottom-1/3 right-1/5">
+                  <div className="absolute bottom-1/3 right-1/4">
                     <div className="w-3 h-3 bg-blue-400/60 rounded-full relative">
                       <svg className="absolute -left-8 -top-8" width="30" height="30" viewBox="0 0 30 30">
                         <path d="M 5,5 Q 15,25 25,5" stroke="#3B82F6" strokeWidth="1" fill="none" />
@@ -578,7 +578,7 @@ const InteractiveGraphic = () => {
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     <div className="w-2 h-2 bg-red-400/70 rounded-full"></div>
                     <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-[8px] font-medium bg-red-50/90 px-1 py-0.5 rounded text-red-600 whitespace-nowrap">
-                      Nanoplastic (<1μm)
+                      Nanoplastic (&lt;1μm)
                     </div>
                   </div>
                   
