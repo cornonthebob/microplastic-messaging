@@ -2,9 +2,8 @@
 import React from 'react';
 import AboutMicroplastics from './microplastics/AboutMicroplastics';
 import PlasticTypesDetail from './microplastics/PlasticTypesDetail';
-import HealthImpacts from './microplastics/HealthImpacts';
 import MicroplasticIllustration from './microplastics/MicroplasticIllustration';
-import { Waves, FlaskConical, ShieldAlert } from 'lucide-react';
+import { Waves, FlaskConical } from 'lucide-react';
 
 const PlasticInfo = () => {
   return (
@@ -46,15 +45,6 @@ const PlasticInfo = () => {
         
         <PlasticTypesDetail />
         
-        {/* Another wave divider with improved styling */}
-        <div className="relative h-24 w-full overflow-hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0 w-full" preserveAspectRatio="none">
-            <path fill="rgba(224, 242, 254, 0.5)" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,229.3C672,224,768,192,864,181.3C960,171,1056,181,1152,181.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-          </svg>
-        </div>
-        
-        <HealthImpacts />
-        
         {/* Bottom decorative elements */}
         <div className="flex justify-center gap-12 py-10 bg-blue-50/50">
           <div className="p-4 bg-white rounded-full shadow-lg">
@@ -62,9 +52,6 @@ const PlasticInfo = () => {
           </div>
           <div className="p-4 bg-white rounded-full shadow-lg">
             <FlaskConical className="w-8 h-8 text-teal-500" />
-          </div>
-          <div className="p-4 bg-white rounded-full shadow-lg">
-            <ShieldAlert className="w-8 h-8 text-red-400" />
           </div>
         </div>
       </div>
