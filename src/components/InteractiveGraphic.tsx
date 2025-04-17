@@ -79,14 +79,14 @@ const InteractiveGraphic = () => {
   return (
     <div id="interactive" className="bg-gray-50">
       <div className="section-container">
-        <div className="text-center mb-8 opacity-0 animate-fade-in">
+        <div className="text-center mb-16 opacity-0 animate-fade-in">
           <span className="inline-flex items-center rounded-full px-4 py-1 text-xs font-medium bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">
             Interactive Visualization
           </span>
           <h2 className="text-3xl md:text-4xl font-bold">PET Plastic Journey</h2>
-          <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 mb-4 rounded-full"></div>
+          <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 mb-8 rounded-full"></div>
           <p className="text-gray-600 max-w-3xl mx-auto text-sm">
-            Explore the lifecycle of PET plastic - from production to its impact on human health, revealing the transformation of everyday materials into persistent environmental pollutants.
+            Explore the journey of PET plastic from production to its impact on human health, revealing how everyday materials become environmental pollutants.
           </p>
         </div>
 
@@ -173,141 +173,7 @@ const InteractiveGraphic = () => {
           </div>
 
           <div className="mt-8 flex justify-center items-center min-h-60">
-            {activeStage.id === 1 && (
-              <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
-                <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 h-1 bg-blue-200"></div>
-                
-                <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-300 rounded-lg flex items-center justify-center shadow-md">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 22V8L12 2L21 8V22H3Z" stroke="#E67E22" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M9 22V13H15V22" stroke="#E67E22" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <div className="absolute -bottom-6 text-xs font-medium text-gray-600">Raw Materials</div>
-                </div>
-                
-                <div className="absolute left-1/3 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-300 rounded-lg flex items-center justify-center shadow-md">
-                  <FlaskConical size={32} className="text-blue-600" />
-                  <div className="absolute -bottom-6 text-xs font-medium text-gray-600">Polymerization</div>
-                </div>
-                
-                <div className="absolute right-1/3 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-green-100 to-green-300 rounded-lg flex items-center justify-center shadow-md">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L19 7V17L12 22L5 17V7L12 2Z" stroke="#2ECC71" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <div className="absolute -bottom-6 text-xs font-medium text-gray-600">Molding</div>
-                </div>
-                
-                <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-red-100 to-red-300 rounded-lg flex items-center justify-center shadow-md">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 22V12H15V22" stroke="#E74C3C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M6 12V9C6 8.44772 6.44772 8 7 8H17C17.5523 8 18 8.44772 18 9V12" stroke="#E74C3C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 8V4" stroke="#E74C3C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <div className="absolute -bottom-6 text-xs font-medium text-gray-600">Consumption</div>
-                </div>
-                
-                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M30 50 L120 50" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
-                  <path d="M130 50 L220 50" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
-                  <path d="M230 50 L320 50" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
-                </svg>
-              </div>
-            )}
-
-            {activeStage.id === 2 && (
-              <div className="relative h-48 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
-                <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-blue-100 rounded-lg overflow-hidden flex flex-col">
-                  <div className="flex-1 relative p-4">
-                    <div className="flex justify-between">
-                      <div className="flex flex-col items-center">
-                        <Sun className="w-8 h-8 text-yellow-600" />
-                        <span className="text-xs mt-1">UV</span>
-                      </div>
-                      <div className="flex flex-col items-center">
-                        <Wind className="w-8 h-8 text-blue-400" />
-                        <span className="text-xs mt-1">Wind</span>
-                      </div>
-                      <div className="flex flex-col items-center">
-                        <Droplets className="w-8 h-8 text-blue-500" />
-                        <span className="text-xs mt-1">Moisture</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex justify-center mt-4">
-                      <div className="relative w-24 h-16 bg-blue-200/30 rounded-lg border border-blue-300/50">
-                        <div className="absolute top-1/4 left-0 w-4 h-1 bg-yellow-100 rounded-full transform -rotate-30"></div>
-                        <div className="absolute bottom-1/4 right-0 w-5 h-0.5 bg-yellow-100 rounded-full transform rotate-45"></div>
-                      </div>
-                    </div>
-                    
-                    <div className="text-center mt-2">
-                      <div className="text-xs text-gray-700">Slow Degradation</div>
-                      <div className="text-xs text-gray-500">450+ years</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {activeStage.id === 3 && (
-              <div className="relative h-60 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
-                <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-blue-50 rounded-lg overflow-hidden">
-                  <div className="absolute top-6 left-6">
-                    <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20 0 V10 H40 V0 M20 10 C20 10 10 20 10 30 C10 40 15 60 20 70 C25 80 30 80 30 80 C30 80 35 80 40 70 C45 60 50 40 50 30 C50 20 40 10 40 10 Z" 
-                            stroke="#93C5FD" fill="rgba(147, 197, 253, 0.3)"/>
-                    </svg>
-                    <div className="absolute -bottom-6 text-xs font-medium text-center w-full">Intact Bottle</div>
-                  </div>
-                  
-                  <div className="absolute top-6 right-6">
-                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 0 V5 H20 V0 M10 5 C10 5 5 10 5 15 C5 20 8 30 10 35 C12 40 15 40 15 40 C15 40 18 40 20 35 C22 30 25 20 25 15 C25 10 20 5 20 5 Z" 
-                            stroke="#93C5FD" fill="rgba(147, 197, 253, 0.3)" className="transform translate-x-20"/>
-                      <path d="M20 15 L25 20 L15 35 L10 30 Z" 
-                            stroke="#93C5FD" fill="rgba(147, 197, 253, 0.3)"/>
-                    </svg>
-                    <div className="absolute -bottom-6 text-xs font-medium text-center w-full">Large Fragments</div>
-                  </div>
-                  
-                  <div className="absolute bottom-16 left-6">
-                    <div className="flex flex-wrap gap-2 max-w-[120px]">
-                      <div className="w-5 h-5 bg-blue-200/60 rounded-sm transform rotate-12"></div>
-                      <div className="w-4 h-4 bg-blue-200/60 rounded-sm transform -rotate-12"></div>
-                      <div className="w-6 h-3 bg-blue-200/60 rounded-sm transform rotate-45"></div>
-                      <div className="w-3 h-3 bg-blue-200/60 rounded-sm"></div>
-                      <div className="w-5 h-2 bg-blue-200/60 rounded-sm transform -rotate-20"></div>
-                      <div className="w-4 h-4 bg-blue-200/60 rounded-sm"></div>
-                    </div>
-                    <div className="absolute -bottom-6 text-xs font-medium text-center w-full">Microplastics</div>
-                  </div>
-                  
-                  <div className="absolute bottom-16 right-6">
-                    <div className="flex flex-wrap gap-1 max-w-[100px] justify-center">
-                      <div className="w-2 h-2 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1 h-1 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-2 h-1 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1 h-1 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1.5 h-1.5 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1 h-1 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-2 h-1 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1 h-1 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1 h-1 bg-blue-300/70 rounded-full"></div>
-                      <div className="w-1.5 h-1.5 bg-blue-300/70 rounded-full"></div>
-                    </div>
-                    <div className="absolute -bottom-6 text-xs font-medium text-center w-full">Nanoplastics</div>
-                  </div>
-                  
-                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M100 40 L200 40" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
-                    <path d="M300 40 L350 80" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
-                    <path d="M80 80 L40 140" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
-                    <path d="M300 80 L250 140" stroke="#BFDBFE" strokeWidth="2" strokeDasharray="4" />
-                  </svg>
-                </div>
-              </div>
-            )}
-            
+            {/* Stage 4 (Environmental Transport) graphic */}
             {activeStage.id === 4 && (
               <div className="relative h-48 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
                 <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-blue-300 rounded-lg overflow-hidden">
@@ -337,80 +203,10 @@ const InteractiveGraphic = () => {
               </div>
             )}
             
-            {activeStage.id === 5 && (
-              <div className="relative h-48 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
-                <div className="absolute inset-0 bg-white rounded-lg overflow-hidden border border-gray-100">
-                  <div className="absolute inset-x-0 top-4 flex justify-center">
-                    <div className="relative">
-                      <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M70 30 A15 15 0 0 1 70 60 A15 15 0 0 1 70 30" fill="#E2E8F0"/>
-                        <path d="M70 60 L70 110" stroke="#E2E8F0" strokeWidth="20" strokeLinecap="round"/>
-                        <path d="M70 70 L40 90" stroke="#E2E8F0" strokeWidth="10" strokeLinecap="round"/>
-                        <path d="M70 70 L100 90" stroke="#E2E8F0" strokeWidth="10" strokeLinecap="round"/>
-                        <path d="M70 110 L50 140" stroke="#E2E8F0" strokeWidth="10" strokeLinecap="round"/>
-                        <path d="M70 110 L90 140" stroke="#E2E8F0" strokeWidth="10" strokeLinecap="round"/>
-                      </svg>
-                      
-                      <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-20 h-20">
-                        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                          <div className="w-4 h-4 bg-blue-100 rounded-full flex items-center justify-center">
-                            <div className="w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
-                          </div>
-                          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap text-xs font-medium bg-blue-50 rounded px-2 py-0.5 border border-blue-100">
-                            Inhalation
-                          </div>
-                        </div>
-                        
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                          <div className="w-4 h-4 bg-green-100 rounded-full flex items-center justify-center">
-                            <div className="w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-300"></div>
-                          </div>
-                          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap text-xs font-medium bg-green-50 rounded px-2 py-0.5 border border-green-100">
-                            Ingestion
-                          </div>
-                        </div>
-                        
-                        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
-                          <div className="w-4 h-4 bg-red-100 rounded-full flex items-center justify-center">
-                            <div className="w-2 h-2 bg-red-400 rounded-full animate-ping animation-delay-600"></div>
-                          </div>
-                          <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap text-xs font-medium bg-red-50 rounded px-2 py-0.5 border border-red-100">
-                            Dermal Contact
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                      <span className="text-xs text-gray-600">Ambient Air</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                      <span className="text-xs text-gray-600">Food & Water</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                      <span className="text-xs text-gray-600">Textiles & Products</span>
-                    </div>
-                  </div>
-                  
-                  <div className="absolute bottom-4 right-4 bg-gray-50 rounded-lg p-2 border border-gray-100 max-w-[150px]">
-                    <p className="text-xs text-gray-900 font-semibold mb-1">Weekly Human Intake:</p>
-                    <p className="text-xs text-gray-600">~5g of plastic</p>
-                    <p className="text-xs text-gray-600 font-medium mt-1">(equivalent to a credit card)</p>
-                  </div>
-                </div>
-              </div>
-            )}
-            
+            {/* Stage 6 (Cellular Interactions) graphic */}
             {activeStage.id === 6 && (
               <div className="relative h-48 w-full max-w-lg opacity-0 animate-fade-in animation-delay-200">
                 <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-purple-50 rounded-lg overflow-hidden">
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full border-2 border-purple-200 opacity-50"></div>
-                  
                   <div className="flex justify-center items-center h-full">
                     <div className="flex space-x-4">
                       <div className="flex flex-col items-center">
